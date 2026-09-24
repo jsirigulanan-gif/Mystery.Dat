@@ -22,8 +22,8 @@ import docx
 
 import render_lemino_graphics as rlg
 
-FONT_SERIF = "/home/keng/.local/share/lemino_fonts/serif.ttf"
-FONT_THAI = "/home/keng/.local/share/lemino_fonts/thai.ttf"
+FONT_UNIVERSAL = "/home/keng/.local/share/lemino_fonts/universal.ttf"
+FONT_BOLD = "/home/keng/.local/share/lemino_fonts/thai-bold.ttf"
 
 def parse_all_shots(docx_path):
     doc = docx.Document(docx_path)
@@ -128,9 +128,10 @@ def render_shot_clip(shot, idx, footage_dir, broll_pool, out_dir, txt_dir, force
     sid = shot["id"].upper()
 
     # Text helper for lower-third tag
+    clean_gfx = gfx.replace('—', ' - ').replace('–', ' - ').replace('“', '"').replace('”', '"')
     gfx_txt_file = os.path.join(txt_dir, f"{shot['id'].lower()}_gfx.txt")
     with open(gfx_txt_file, "w", encoding="utf-8") as f:
-        f.write(gfx if gfx else f"{shot['id']} // 1789 PARIS ARCHIVE")
+        f.write(clean_gfx if clean_gfx else f"{shot['id']} // 1789 PARIS ARCHIVE")
 
     # =========================================================================
     # CASE 1: Dedicated LEMiNO Motion Graphic Shots
@@ -154,7 +155,7 @@ def render_shot_clip(shot, idx, footage_dir, broll_pool, out_dir, txt_dir, force
         if gfx:
             vf = (
                 f"scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=30,"
-                f"drawtext=fontfile={FONT_THAI}:textfile={gfx_txt_file}:expansion=none:fontcolor=0x8ac2bb:fontsize=22:x=118:y=h-75:box=1:boxcolor=0x121719@0.85:boxborderw=8"
+                f"drawtext=fontfile={FONT_UNIVERSAL}:textfile={gfx_txt_file}:expansion=none:fontcolor=0x8ac2bb:fontsize=22:x=118:y=h-75:box=1:boxcolor=0x121719@0.85:boxborderw=8"
             )
         else:
             vf = "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=30"
@@ -181,7 +182,7 @@ def render_shot_clip(shot, idx, footage_dir, broll_pool, out_dir, txt_dir, force
         if gfx:
             vf = (
                 f"scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=30,"
-                f"drawtext=fontfile={FONT_THAI}:textfile={gfx_txt_file}:expansion=none:fontcolor=0x8ac2bb:fontsize=22:x=118:y=h-75:box=1:boxcolor=0x121719@0.85:boxborderw=8"
+                f"drawtext=fontfile={FONT_UNIVERSAL}:textfile={gfx_txt_file}:expansion=none:fontcolor=0x8ac2bb:fontsize=22:x=118:y=h-75:box=1:boxcolor=0x121719@0.85:boxborderw=8"
             )
         else:
             vf = "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=30"

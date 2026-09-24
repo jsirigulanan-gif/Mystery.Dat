@@ -1,9 +1,9 @@
 # 🛡️ LEMiNO Post-Render Video QA Inspection Report
 
 **ไฟล์ที่ตรวจสอบ:** `Assassin_Creed_Unity_LEMiNO_15Min_Master.mp4`  
-**ขนาดไฟล์:** 1094.01 MB  
-**เวลาที่ตรวจสอบ:** 2026-09-24 16:18:26  
-**คะแนนคุณภาพ (Quality Score):** `92.5%`  
+**ขนาดไฟล์:** 1131.61 MB  
+**เวลาที่ตรวจสอบ:** 2026-09-24 22:14:58  
+**คะแนนคุณภาพ (Quality Score):** `88.3%`  
 **ผลการตัดสิน (Verdict):** **NEEDS POLISHING (ควรปรับปรุงแก้ไขก่อนเผยแพร่)**  
 
 ## 1. ผลการตรวจสอบทางเทคนิค (Technical Checks)
@@ -20,12 +20,14 @@
 | **Audio** | Audio Codec | 🟢 PASS | AAC audio stream |
 | **Audio** | Channel Layout | 🟢 PASS | Stereo (2 channels) |
 | **Audio** | Sample Rate | 🟢 PASS | 48000 Hz (Broadcast standard) |
-| **Audio Loudness** | Integrated Loudness (LUFS) | 🟢 PASS | -14.3 LUFS (Target: -14.0 LUFS, YouTube/EBU Standard Compliant) |
+| **Audio Loudness** | Integrated Loudness (LUFS) | 🟢 PASS | -14.6 LUFS (Target: -14.0 LUFS, YouTube/EBU Standard Compliant) |
 | **Audio Loudness** | True Peak Level | 🟡 WARN | -0.9 dBTP (Headroom below -1.0 dBTP recommendation. Minor risk of DAC distortion) |
-| **Audio Loudness** | Dynamic Range (LRA) | 🟢 PASS | 4.4 LU (Balanced speech & ambient dynamics) |
-| **Artifacts** | Accidental Black Frames | 🟡 WARN | Black screen gap detected at 08:18 - 08:18 (Duration: 0.83s) |
-| **Artifacts** | Accidental Black Frames | 🟡 WARN | Black screen gap detected at 12:25 - 12:29 (Duration: 3.83s) |
-| **Artifacts** | Frozen Video Check | 🟡 WARN | 21 static intervals detected. Verify whether these are intentional graphics or rendering lockups. |
+| **Audio Loudness** | Dynamic Range (LRA) | 🟡 WARN | 13.9 LU (Very wide dynamic range. Some whispers may be inaudible on mobile speakers) |
+| **Artifacts** | Accidental Black Frames | 🟡 WARN | Black screen gap detected at 01:50 - 01:51 (Duration: 0.73s) |
+| **Artifacts** | Accidental Black Frames | 🟡 WARN | Black screen gap detected at 08:19 - 08:19 (Duration: 0.83s) |
+| **Artifacts** | Accidental Black Frames | 🟡 WARN | Black screen gap detected at 08:55 - 08:59 (Duration: 3.93s) |
+| **Artifacts** | Accidental Black Frames | 🟡 WARN | Black screen gap detected at 12:26 - 12:30 (Duration: 3.83s) |
+| **Artifacts** | Frozen Video Check | 🟡 WARN | 19 static intervals detected. Verify whether these are intentional graphics or rendering lockups. |
 
 ## 2. วิธีการแก้ไขจุดบกพร่อง (Actionable Fixes & Remediations)
 
@@ -39,20 +41,36 @@ ffmpeg -i /home/keng/พื้นโต๊ะ/Assassin_Creed_Unity_LEMiNO_15Min_
 
 ### ข้อที่ 2: 🟡 **WARNING** — [Artifacts] Accidental Black Frames
 
-* **คำอธิบายและแนวทางแก้ไข:** เกิดจอดำว่างเปล่าระหว่าง 08:18 - 08:18 ตรวจสอบว่ามีช็อตที่เรนเดอร์ไม่ติดหรือไม่ แนะนำให้แทรก B-roll หรือ Typography Card ในช่วงเวลานี้
+* **คำอธิบายและแนวทางแก้ไข:** เกิดจอดำว่างเปล่าระหว่าง 01:50 - 01:51 ตรวจสอบว่ามีช็อตที่เรนเดอร์ไม่ติดหรือไม่ แนะนำให้แทรก B-roll หรือ Typography Card ในช่วงเวลานี้
 * **คำสั่งแก้ไขด่วนใน Terminal (CLI Fix):**
 ```bash
-# ตรวจสอบช็อตที่ช่วงไทม์โค้ด 08:18 และเรนเดอร์คลิปทดแทนด้วย tools/render_lemino_graphics.py
+# ตรวจสอบช็อตที่ช่วงไทม์โค้ด 01:50 และเรนเดอร์คลิปทดแทนด้วย tools/render_lemino_graphics.py
 ```
 
 ### ข้อที่ 3: 🟡 **WARNING** — [Artifacts] Accidental Black Frames
 
-* **คำอธิบายและแนวทางแก้ไข:** เกิดจอดำว่างเปล่าระหว่าง 12:25 - 12:29 ตรวจสอบว่ามีช็อตที่เรนเดอร์ไม่ติดหรือไม่ แนะนำให้แทรก B-roll หรือ Typography Card ในช่วงเวลานี้
+* **คำอธิบายและแนวทางแก้ไข:** เกิดจอดำว่างเปล่าระหว่าง 08:19 - 08:19 ตรวจสอบว่ามีช็อตที่เรนเดอร์ไม่ติดหรือไม่ แนะนำให้แทรก B-roll หรือ Typography Card ในช่วงเวลานี้
 * **คำสั่งแก้ไขด่วนใน Terminal (CLI Fix):**
 ```bash
-# ตรวจสอบช็อตที่ช่วงไทม์โค้ด 12:25 และเรนเดอร์คลิปทดแทนด้วย tools/render_lemino_graphics.py
+# ตรวจสอบช็อตที่ช่วงไทม์โค้ด 08:19 และเรนเดอร์คลิปทดแทนด้วย tools/render_lemino_graphics.py
 ```
 
-### ข้อที่ 4: 🟡 **WARNING** — [Artifacts] Frozen Video Check
+### ข้อที่ 4: 🟡 **WARNING** — [Artifacts] Accidental Black Frames
+
+* **คำอธิบายและแนวทางแก้ไข:** เกิดจอดำว่างเปล่าระหว่าง 08:55 - 08:59 ตรวจสอบว่ามีช็อตที่เรนเดอร์ไม่ติดหรือไม่ แนะนำให้แทรก B-roll หรือ Typography Card ในช่วงเวลานี้
+* **คำสั่งแก้ไขด่วนใน Terminal (CLI Fix):**
+```bash
+# ตรวจสอบช็อตที่ช่วงไทม์โค้ด 08:55 และเรนเดอร์คลิปทดแทนด้วย tools/render_lemino_graphics.py
+```
+
+### ข้อที่ 5: 🟡 **WARNING** — [Artifacts] Accidental Black Frames
+
+* **คำอธิบายและแนวทางแก้ไข:** เกิดจอดำว่างเปล่าระหว่าง 12:26 - 12:30 ตรวจสอบว่ามีช็อตที่เรนเดอร์ไม่ติดหรือไม่ แนะนำให้แทรก B-roll หรือ Typography Card ในช่วงเวลานี้
+* **คำสั่งแก้ไขด่วนใน Terminal (CLI Fix):**
+```bash
+# ตรวจสอบช็อตที่ช่วงไทม์โค้ด 12:26 และเรนเดอร์คลิปทดแทนด้วย tools/render_lemino_graphics.py
+```
+
+### ข้อที่ 6: 🟡 **WARNING** — [Artifacts] Frozen Video Check
 
 * **คำอธิบายและแนวทางแก้ไข:** หากเป็นภาพนิ่งกราฟิก แนะนำให้ใส่เอฟเฟกต์ Slow Push-in (Ken Burns effect) หรือ Subtle Floating Grid เพื่อให้ภาพมีความเคลื่อนไหวมีชีวิตชีวา
