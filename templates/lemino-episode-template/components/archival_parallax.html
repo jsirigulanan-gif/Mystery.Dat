@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <template>
+    <style>
+      @font-face { font-family: Thai; src: url('assets/thai.ttf'); }
+      @font-face { font-family: Stone; src: url('assets/serif.ttf'); }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      #root {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0e0c0b;
+        color: #eee6d3;
+        font-family: Thai, sans-serif;
+      }
+      .archival-viewport {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        perspective: 1200px;
+      }
+      .archival-doc-container {
+        position: relative;
+        width: 1400px;
+        height: 880px;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.85);
+        border: 1px solid rgba(197, 155, 109, 0.25);
+        overflow: hidden;
+        background: #15110e;
+      }
+      .archival-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: contrast(1.12) brightness(0.92) sepia(0.20);
+        transform-origin: center center;
+      }
+      .vignette-overlay {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at center, rgba(14,12,11,0.05) 50%, rgba(14,12,11,0.75) 100%);
+        pointer-events: none;
+      }
+      /* Red forensic highlight marker */
+      .highlight-box {
+        position: absolute;
+        border: 2px solid #e64553;
+        background: rgba(230, 69, 83, 0.12);
+        box-shadow: 0 0 15px rgba(230, 69, 83, 0.4);
+        border-radius: 2px;
+        transform-origin: left center;
+        opacity: 0;
+      }
+      /* Subtle lower-third archival tag */
+      .archival-tag {
+        position: absolute;
+        left: 118px;
+        bottom: 55px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 20px;
+        letter-spacing: 3px;
+        color: #c59b6d;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      }
+      .archival-stamp {
+        border: 1px solid #c59b6d;
+        padding: 3px 10px;
+        font-size: 16px;
+        border-radius: 2px;
+        color: #c59b6d;
+      }
+    </style>
+    <div id="root" data-composition-id="__COMP_ID__" data-width="1920" data-height="1080" data-duration="__DURATION_SEC__">
+      <div class="archival-viewport">
+        <div class="archival-doc-container">
+          <img id="img-__COMP_ID__" class="archival-img clip" src="__IMAGE_SRC__" data-start="0" data-duration="__DURATION_FRAMES__" />
+          <div class="vignette-overlay"></div>
+          <div class="highlight-box" style="left: __HL_LEFT__px; top: __HL_TOP__px; width: __HL_WIDTH__px; height: __HL_HEIGHT__px;"></div>
+        </div>
+      </div>
+
+      <div class="archival-tag">
+        <span class="archival-stamp">EVIDENCE</span>
+        <span>__LABEL__</span>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({paused: true});
+      // 2.5D Camera slow cinematic push-in
+      tl.fromTo('.archival-img', 
+        { scale: 1.0, transformOrigin: 'center center' }, 
+        { scale: 1.08, duration: __DURATION_SEC__, ease: 'power1.out' }, 0
+      );
+      tl.fromTo('.archival-doc-container',
+        { y: 15, rotateX: 2 },
+        { y: -10, rotateX: -1, duration: __DURATION_SEC__, ease: 'none' }, 0
+      );
+      // Reveal lower archival tag
+      tl.fromTo('.archival-tag', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 1.0, ease: 'power2.out' }, 0.4);
+      // Forensic highlight appears and expands
+      tl.fromTo('.highlight-box', { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.8, ease: 'power2.out' }, 1.5);
+      // Soft transition out
+      tl.to('#root', { opacity: 0, duration: 0.5, ease: 'power1.in' }, __OUT_SEC__);
+      window.__timelines['__COMP_ID__'] = tl;
+    </script>
+  </template>
+</body>
+</html>
