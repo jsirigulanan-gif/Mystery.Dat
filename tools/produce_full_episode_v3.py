@@ -69,34 +69,45 @@ def parse_all_shots(docx_path):
 
 def get_broll_clip(shot, idx, broll_pool):
     """Select the best matching high-res B-roll source and timestamp offset."""
-    vis = shot["visual"].lower()
-    ref = shot["reference"].lower()
+    vis = shot.get("visual", "").lower()
+    ref = shot.get("reference", "").lower()
+    gfx = shot.get("graphics", "").lower()
+    dur = float(shot.get("duration", 5.0))
+    full_desc = vis + " " + ref + " " + gfx
 
-    # 1. Face Glitch or Bug
-    if any(w in vis or w in ref for w in ["glitch", "bug", "face", "broken", "missing", "teeth", "eyeball"]):
+    # 1. Face Glitch or Bug or Teeth or Eye or Broken Code
+    # face_glitch.mp4: duration = 14.53s
+    if any(w in full_desc for w in ["glitch", "bug", "face", "broken", "missing", "teeth", "eyeball", "texture", "socket", "abomination"]):
         src = os.path.join(broll_pool, "face_glitch.mp4")
         if os.path.exists(src) and os.path.getsize(src) > 100000:
-            offset = (idx * 2) % 10
+            max_off = max(0.5, 14.0 - dur - 0.5)
+            offset = 0.5 + ((idx * 1.5) % max_off)
             return src, offset
 
-    # 2. Notre Dame Cathedral
-    if any(w in vis or w in ref for w in ["notre-dame", "notre dame", "cathedral", "gothic", "spire", "stone", "flying buttress"]):
+    # 2. Notre Dame Cathedral, Stained Glass, Architecture, Caroline Miousse, Spire
+    # notre_dame_tour.mp4: duration = 300.02s
+    if any(w in full_desc for w in ["notre-dame", "notre dame", "cathedral", "gothic", "spire", "stone", "flying buttress", "stained glass", "rose window", "interior", "24 months"]):
         src = os.path.join(broll_pool, "notre_dame_tour.mp4")
         if os.path.exists(src) and os.path.getsize(src) > 100000:
-            offset = 20 + (idx * 11) % 240
+            max_off = max(10.0, 285.0 - dur - 5.0)
+            offset = 10.0 + ((idx * 11.3) % max_off)
             return src, offset
 
-    # 3. Revolution / Crowds / E3 / Action
-    if any(w in vis or w in ref for w in ["revolution", "riot", "crowd", "bastille", "e3", "press conference", "stage", "arno"]):
+    # 3. Revolution, Crowds, E3, Press Conference, Arno Action, Riot, Bastille, Traitor
+    # e3_trailer.mp4: duration = 225.03s
+    if any(w in full_desc for w in ["revolution", "riot", "crowd", "bastille", "e3", "press conference", "stage", "arno", "trailer", "speech", "sword", "guillotine"]):
         src = os.path.join(broll_pool, "e3_trailer.mp4")
         if os.path.exists(src) and os.path.getsize(src) > 100000:
-            offset = 15 + (idx * 9) % 180
+            max_off = max(10.0, 210.0 - dur - 5.0)
+            offset = 10.0 + ((idx * 9.5) % max_off)
             return src, offset
 
-    # 4. Paris Streets / Rooftops / Dawn / Parkour
+    # 4. Paris Streets, Rooftops, Dawn, Parkour, Atmosphere
+    # paris_freeroam.mp4: duration = 234.93s, container stream starts at 5.066s
     src = os.path.join(broll_pool, "paris_freeroam.mp4")
     if os.path.exists(src) and os.path.getsize(src) > 100000:
-        offset = 10 + (idx * 13) % 200
+        max_off = max(10.0, 215.0 - dur - 5.0)
+        offset = 10.0 + ((idx * 7.7) % max_off)
         return src, offset
 
     return None, 0
@@ -104,9 +115,9 @@ def get_broll_clip(shot, idx, broll_pool):
 def render_shot_clip(shot, idx, footage_dir, broll_pool, out_dir, txt_dir, force=False):
     os.makedirs(out_dir, exist_ok=True)
     os.makedirs(txt_dir, exist_ok=True)
-    out_path = os.path.join(out_dir, f"{shot['id'].lower()}_ready.mp4")
 
-    if not force and os.path.exists(out_path) and os.path.getsize(out_path) > 50000:
+    out_path = os.path.join(out_dir, f"{shot['id'].lower()}_ready.mp4")
+    if not force and os.path.exists(out_path) and os.path.getsize(out_path) > 30000:
         return out_path
 
     dur = shot["duration"]
@@ -122,33 +133,17 @@ def render_shot_clip(shot, idx, footage_dir, broll_pool, out_dir, txt_dir, force
         f.write(gfx if gfx else f"{shot['id']} // 1789 PARIS ARCHIVE")
 
     # =========================================================================
-    # CASE 1: LEMiNO Graphic Shots & Motion Animations
-    # When source is HyperFrames AI Generation or Archival Still + 2.5D Motion
+    # CASE 1: Dedicated LEMiNO Motion Graphic Shots
+    # Strictly renders dedicated compositions (Titles, Archival Documents, 
+    # Data Visualizations, Flowcharts, Chapter Cards, Quotes).
+    # Returns None for all other shots so they use authentic B-roll footage.
     # =========================================================================
-    is_graphic_source = ("HyperFrames" in source) or ("Archival Still" in source)
-    is_graphic_type = any(k in stype for k in [
-        "Typography", "Quote", "Diagram", "Data Visualization", "Timeline", 
-        "Transition", "Chapter", "Object", "Abstract", "Archival / Evidence"
-    ])
-
-    # Special check: SHOT-001 or SHOT-002 Grand Title
-    if sid == "SHOT-001":
-        print(f"[{sid}] Rendering Master Grand Title Sequence...")
-        rlg.render_clip_to_mp4(rlg.render_grand_title_frame, dur, out_path)
-        return out_path
-
-    if is_graphic_source or is_graphic_type:
-        # Check if we should render dedicated graphics
-        rendered = False
-        try:
-            rlg.generate_shot_graphic_clip(shot, out_path)
-            if os.path.exists(out_path) and os.path.getsize(out_path) > 30000:
-                rendered = True
-        except Exception as e:
-            rendered = False
-
-        if rendered:
+    try:
+        graphic_clip = rlg.generate_shot_graphic_clip(shot, out_path)
+        if graphic_clip and os.path.exists(out_path) and os.path.getsize(out_path) > 30000:
             return out_path
+    except Exception as e:
+        pass
 
     # =========================================================================
     # CASE 2: YouTube Footage & Live Gameplay Cuts
@@ -175,7 +170,8 @@ def render_shot_clip(shot, idx, footage_dir, broll_pool, out_dir, txt_dir, force
         ]
         try:
             subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-            return out_path
+            if os.path.exists(out_path) and os.path.getsize(out_path) > 30000:
+                return out_path
         except Exception:
             pass
 
@@ -192,7 +188,7 @@ def render_shot_clip(shot, idx, footage_dir, broll_pool, out_dir, txt_dir, force
 
         cmd = [
             "ffmpeg", "-y",
-            "-ss", str(offset),
+            "-ss", f"{offset:.2f}",
             "-i", broll_src,
             "-t", str(dur),
             "-vf", vf,
@@ -202,7 +198,8 @@ def render_shot_clip(shot, idx, footage_dir, broll_pool, out_dir, txt_dir, force
         ]
         try:
             subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-            return out_path
+            if os.path.exists(out_path) and os.path.getsize(out_path) > 30000:
+                return out_path
         except Exception:
             pass
 
@@ -269,6 +266,8 @@ def main():
         "-c:v", "copy",
         "-c:a", "aac",
         "-b:a", "256k",
+        "-ar", "48000",
+        "-movflags", "+faststart",
         final_output
     ]
     subprocess.run(cmd, check=True)

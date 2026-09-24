@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "file_path": "/home/keng/พื้นโต๊ะ/Assassin_Creed_Unity_LEMiNO_15Min_Master.mp4",
+    "file_name": "Assassin_Creed_Unity_LEMiNO_15Min_Master.mp4",
+    "timestamp": "2026-09-24 15:32:10",
+    "file_size_bytes": 194908947,
+    "file_size_mb": 185.88
+  },
+  "streams": {},
+  "checks": [
+    {
+      "category": "Container",
+      "name": "Format Standard",
+      "status": "PASS",
+      "details": "Valid MP4/MOV container (mov,mp4,m4a,3gp,3g2,mj2)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Container",
+      "name": "Web Streaming (FastStart)",
+      "status": "PASS",
+      "details": "Moov atom located at beginning of file (Instant web playback enabled)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Timeline",
+      "name": "Runtime Duration",
+      "status": "PASS",
+      "details": "900.00s (Matches target 900.00s within 1 frame)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Video",
+      "name": "Video Codec",
+      "status": "PASS",
+      "details": "Broadcast standard H.264 / AVC (h264)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Video",
+      "name": "Chroma Subsampling",
+      "status": "PASS",
+      "details": "YUV420p (100% universal hardware & web compatibility)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Video",
+      "name": "Aspect Ratio & Resolution",
+      "status": "PASS",
+      "details": "1920x1080 (16:9 Full HD exact)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Video",
+      "name": "Frame Rate",
+      "status": "PASS",
+      "details": "30.00 fps (Matches broadcast standard 30.00 fps)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Audio",
+      "name": "Audio Codec",
+      "status": "PASS",
+      "details": "AAC audio stream",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Audio",
+      "name": "Channel Layout",
+      "status": "PASS",
+      "details": "Stereo (2 channels)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Audio",
+      "name": "Sample Rate",
+      "status": "PASS",
+      "details": "48000 Hz (Broadcast standard)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Audio Loudness",
+      "name": "Integrated Loudness (LUFS)",
+      "status": "PASS",
+      "details": "-14.3 LUFS (Target: -14.0 LUFS, YouTube/EBU Standard Compliant)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Audio Loudness",
+      "name": "True Peak Level",
+      "status": "WARN",
+      "details": "-0.9 dBTP (Headroom below -1.0 dBTP recommendation. Minor risk of DAC distortion)",
+      "remedy": "ตั้งค่า True Peak Limiter ไว้ที่ -1.0 dBTP",
+      "cmd_fix": "ffmpeg -i /home/keng/พื้นโต๊ะ/Assassin_Creed_Unity_LEMiNO_15Min_Master.mp4 -c:v copy -af 'loudnorm=I=-14:LRA=7:TP=-1.0' /home/keng/พื้นโต๊ะ/Assassin_Creed_Unity_LEMiNO_15Min_Master_normalized.mp4"
+    },
+    {
+      "category": "Audio Loudness",
+      "name": "Dynamic Range (LRA)",
+      "status": "PASS",
+      "details": "4.4 LU (Balanced speech & ambient dynamics)",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Artifacts",
+      "name": "Accidental Black Frames",
+      "status": "PASS",
+      "details": "No unintended blackouts detected in narrative progression",
+      "remedy": null,
+      "cmd_fix": null
+    },
+    {
+      "category": "Artifacts",
+      "name": "Frozen Video Check",
+      "status": "WARN",
+      "details": "75 static intervals detected. Verify whether these are intentional graphics or rendering lockups.",
+      "remedy": "หากเป็นภาพนิ่งกราฟิก แนะนำให้ใส่เอฟเฟกต์ Slow Push-in (Ken Burns effect) หรือ Subtle Floating Grid เพื่อให้ภาพมีความเคลื่อนไหวมีชีวิตชีวา",
+      "cmd_fix": null
+    }
+  ],
+  "defects": [
+    {
+      "category": "Audio Loudness",
+      "name": "True Peak Level",
+      "status": "WARN",
+      "details": "-0.9 dBTP (Headroom below -1.0 dBTP recommendation. Minor risk of DAC distortion)",
+      "remedy": "ตั้งค่า True Peak Limiter ไว้ที่ -1.0 dBTP",
+      "cmd_fix": "ffmpeg -i /home/keng/พื้นโต๊ะ/Assassin_Creed_Unity_LEMiNO_15Min_Master.mp4 -c:v copy -af 'loudnorm=I=-14:LRA=7:TP=-1.0' /home/keng/พื้นโต๊ะ/Assassin_Creed_Unity_LEMiNO_15Min_Master_normalized.mp4"
+    },
+    {
+      "category": "Artifacts",
+      "name": "Frozen Video Check",
+      "status": "WARN",
+      "details": "75 static intervals detected. Verify whether these are intentional graphics or rendering lockups.",
+      "remedy": "หากเป็นภาพนิ่งกราฟิก แนะนำให้ใส่เอฟเฟกต์ Slow Push-in (Ken Burns effect) หรือ Subtle Floating Grid เพื่อให้ภาพมีความเคลื่อนไหวมีชีวิตชีวา",
+      "cmd_fix": null
+    }
+  ],
+  "remediations": [
+    {
+      "defect": "[Audio Loudness] True Peak Level",
+      "severity": "WARN",
+      "remedy": "ตั้งค่า True Peak Limiter ไว้ที่ -1.0 dBTP",
+      "cmd_fix": "ffmpeg -i /home/keng/พื้นโต๊ะ/Assassin_Creed_Unity_LEMiNO_15Min_Master.mp4 -c:v copy -af 'loudnorm=I=-14:LRA=7:TP=-1.0' /home/keng/พื้นโต๊ะ/Assassin_Creed_Unity_LEMiNO_15Min_Master_normalized.mp4"
+    },
+    {
+      "defect": "[Artifacts] Frozen Video Check",
+      "severity": "WARN",
+      "remedy": "หากเป็นภาพนิ่งกราฟิก แนะนำให้ใส่เอฟเฟกต์ Slow Push-in (Ken Burns effect) หรือ Subtle Floating Grid เพื่อให้ภาพมีความเคลื่อนไหวมีชีวิตชีวา",
+      "cmd_fix": null
+    }
+  ],
+  "summary": {
+    "total_checks": 15,
+    "passed": 13,
+    "warnings": 2,
+    "critical": 0,
+    "score_percent": 96.0,
+    "verdict": "ACCEPTED WITH MINOR SUGGESTIONS (ผ่านเกณฑ์มาตรฐาน - ปรับปรุงเสริมได้)"
+  }
+}

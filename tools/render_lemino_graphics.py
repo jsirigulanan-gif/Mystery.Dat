@@ -751,8 +751,287 @@ def render_bastille_frame(progress=1.0, shot_id="SHOT-006", act_lbl="ACT I", edl
     return im.convert("RGB")
 
 # ==============================================================================
-# MASTER RENDER CLIP DISPATCHER
+# 11. DATA VISUALIZATION: PLACE DE LA CONCORDE 5,000 NPC CROWD DENSITY (SHOT-016)
 # ==============================================================================
+def render_crowd_density_frame(progress=1.0):
+    """Render Place de la Concorde 5,000 AI NPC crowd density heat map."""
+    im = Image.new("RGBA", (1920, 1080), BG_COLOR)
+    draw = ImageDraw.Draw(im, "RGBA")
+    draw_grid_background(draw, cell_size=60, alpha=20)
+    
+    draw_top_bar(draw, act_num="ACT I", edl_tc="01:17:50:00", shot_id="SHOT-016")
+    draw_footer_bar(draw, "TECHNICAL BENCHMARK // PLACE DE LA CONCORDE — 5,000 SIMULTANEOUS INDEPENDENT AI AGENTS")
+    
+    gx1, gy1, gx2, gy2 = 200, 140, 1920 - 200, 930
+    draw.rectangle([(gx1, gy1), (gx2, gy2)], fill=PANEL_BG, outline=TEAL, width=1)
+    draw_corner_brackets(draw, gx1, gy1, gx2, gy2, arm=30, color=GOLD, width=2)
+    
+    f_head = get_font(FONT_SERIF, 32)
+    f_sub = get_font(FONT_SERIF, 22)
+    f_hud = get_font(FONT_SERIF, 20)
+    
+    draw.text((gx1 + 50, gy1 + 35), "AI CROWD SIMULATION DENSITY // PLACE DE LA CONCORDE", font=f_head, fill=GOLD)
+    draw.text((gx1 + 50, gy1 + 75), "ANVILNEXT 2.0 MULTI-AGENT INFERENCE ENGINE  •  PARIS 1789", font=f_sub, fill=TEAL)
+    
+    # Large circular plaza with heat particles
+    cx = 1920 // 2 - 160
+    cy = 1080 // 2 + 30
+    
+    # Outer plaza ring
+    draw.ellipse([(cx - 320, cy - 320), (cx + 320, cy + 320)], outline=(138, 194, 187, 80), width=2)
+    draw.ellipse([(cx - 200, cy - 200), (cx + 200, cy + 200)], outline=(213, 167, 100, 100), width=1)
+    draw.line([(cx - 360, cy), (cx + 360, cy)], fill=(138, 194, 187, 40), width=1)
+    draw.line([(cx, cy - 360), (cx, cy + 360)], fill=(138, 194, 187, 40), width=1)
+    
+    # Guillotine Scaffold center point
+    draw.rectangle([(cx - 25, cy - 25), (cx + 25, cy + 25)], fill=(230, 69, 83, 180), outline=CRIMSON, width=2)
+    draw.text((cx - 50, cy - 50), "SCAFFOLD", font=f_hud, fill=CRIMSON)
+    
+    # Dense particle crowd swarm (deterministic based on seed)
+    import random
+    rng = random.Random(42)
+    num_dots = int(1200 * min(progress * 1.3, 1.0))
+    for _ in range(num_dots):
+        rad = rng.uniform(30, 310)
+        ang = rng.uniform(0, 6.283)
+        px = int(cx + rad * math.cos(ang))
+        py = int(cy + rad * math.sin(ang))
+        # Color based on radius (hot core crimson/gold, outer teal)
+        dot_col = CRIMSON if rad < 120 else GOLD if rad < 220 else TEAL
+        draw.rectangle([(px, py), (px + 2, py + 2)], fill=dot_col)
+        
+    # Right-side Telemetry Panel
+    rx1, ry1 = 1920 - 580, 200
+    draw.rectangle([(rx1, ry1), (rx1 + 340, ry1 + 340)], fill=(14, 18, 22, 240), outline=GOLD, width=1)
+    draw.text((rx1 + 25, ry1 + 25), "AGENT TELEMETRY:", font=f_head, fill=GOLD)
+    draw.text((rx1 + 25, ry1 + 80), f"SIMULATED NPCS: {int(5000 * min(progress * 1.2, 1.0)):,}", font=f_sub, fill=WHITE)
+    draw.text((rx1 + 25, ry1 + 125), "AI LOGIC: INDEPENDENT MORALE", font=f_sub, fill=TEAL)
+    draw.text((rx1 + 25, ry1 + 170), "ANIMATION BLEND: 32 BONES", font=f_sub, fill=WHITE)
+    draw.text((rx1 + 25, ry1 + 215), "CPU THREAD COST: 100% SAT", font=f_sub, fill=CRIMSON)
+    draw.text((rx1 + 25, ry1 + 260), "DRAW CALL FLOOD: > 50,000", font=f_sub, fill=CRIMSON)
+    
+    return im.convert("RGB")
+
+# ==============================================================================
+# 12. ARCHIVAL EVIDENCE: CAROLINE MIOUSSE DEVELOPER DOSSIER (SHOT-020)
+# ==============================================================================
+def render_caroline_miousse_frame(progress=1.0):
+    """Render Senior Level Artist Caroline Miousse 2-year Notre Dame dossier."""
+    im = Image.new("RGBA", (1920, 1080), BG_COLOR)
+    draw = ImageDraw.Draw(im, "RGBA")
+    draw_grid_background(draw, cell_size=80, alpha=20)
+    
+    draw_top_bar(draw, act_num="ACT I", edl_tc="01:40:00:00", shot_id="SHOT-020")
+    draw_footer_bar(draw, "HISTORICAL RECONSTRUCTION // SENIOR LEVEL ARTIST CAROLINE MIOUSSE — 2 YEARS ON NOTRE-DAME")
+    
+    gx1, gy1, gx2, gy2 = 200, 140, 1920 - 200, 930
+    draw.rectangle([(gx1, gy1), (gx2, gy2)], fill=PANEL_BG, outline=GOLD, width=1)
+    draw_corner_brackets(draw, gx1, gy1, gx2, gy2, arm=30, color=GOLD, width=2)
+    
+    f_head = get_font(FONT_SERIF, 32)
+    f_sub = get_font(FONT_SERIF, 22)
+    f_body = get_font(FONT_SERIF, 24)
+    
+    draw.text((gx1 + 50, gy1 + 35), "UBISOFT MONTREAL // LEAD ARCHITECTURAL RESEARCH DOSSIER", font=f_head, fill=GOLD)
+    draw.text((gx1 + 50, gy1 + 75), "CAROLINE MIOUSSE  •  SENIOR LEVEL ARTIST (2012 — 2014)", font=f_sub, fill=TEAL)
+    
+    # Left Card: Artist Profile
+    ax1, ay1 = gx1 + 50, gy1 + 130
+    draw.rectangle([(ax1, ay1), (ax1 + 420, ay1 + 560)], fill=(18, 22, 26, 230), outline=TEAL, width=1)
+    draw.rectangle([(ax1 + 30, ay1 + 30), (ax1 + 390, ay1 + 350)], fill=(25, 30, 35), outline=GOLD, width=1)
+    
+    # Stylized profile silhouette
+    pcx, pcy = ax1 + 210, ay1 + 190
+    draw.ellipse([(pcx - 50, pcy - 70), (pcx + 50, pcy + 30)], outline=TEAL, width=2)
+    draw.arc([(pcx - 90, pcy + 20), (pcx + 90, pcy + 140)], start=180, end=360, fill=TEAL, width=2)
+    draw.text((ax1 + 85, ay1 + 310), "CAROLINE MIOUSSE", font=f_sub, fill=GOLD)
+    
+    draw.text((ax1 + 30, ay1 + 380), "ROLE: LEAD CATHEDRAL MODELER", font=f_sub, fill=WHITE)
+    draw.text((ax1 + 30, ay1 + 420), "DURATION: 24 MONTHS (FULL-TIME)", font=f_sub, fill=GOLD)
+    draw.text((ax1 + 30, ay1 + 460), "BRICK-BY-BRICK RECONSTRUCTION", font=f_sub, fill=TEAL)
+    draw.text((ax1 + 30, ay1 + 500), "ACCURACY: 1:1 TRUE METRIC", font=f_sub, fill=WHITE)
+    
+    # Right: Cathedral Blueprint Specs
+    bx1 = ax1 + 460
+    draw.rectangle([(bx1, ay1), (gx2 - 50, ay1 + 560)], fill=(14, 18, 22, 230), outline=(138, 194, 187, 80), width=1)
+    draw.text((bx1 + 40, ay1 + 35), "NOTRE-DAME ARCHITECTURAL RECONSTRUCTION METRICS:", font=f_head, fill=GOLD)
+    
+    specs = [
+        ("TOTAL POLYGON BUDGET", "Over 3,000,000 triangles dedicated exclusively to the cathedral"),
+        ("HISTORICAL TEXTURE MAPS", "Scanned historical stone textures & authentic Parisian limestone"),
+        ("THE ANACRONISTIC SPIRE", "Spire included Eugène Viollet-le-Duc design (1844) for player recognition"),
+        ("SEAMLESS INTERIOR ACCESS", "Fully playable interior without a single loading screen transition"),
+        ("2019 CATHEDRAL FIRE PRESERVATION", "Digital scans served as global architectural reference after the tragic fire")
+    ]
+    
+    for i, (title, desc) in enumerate(specs):
+        sy = ay1 + 100 + i * 88
+        draw.text((bx1 + 40, sy), f"• {title}", font=f_sub, fill=TEAL)
+        draw.text((bx1 + 60, sy + 30), desc, font=get_font(FONT_SERIF, 19), fill=WHITE)
+        
+    return im.convert("RGB")
+
+# ==============================================================================
+# 13. TIMELINE: CRITICAL DEVELOPMENT MILESTONES (SHOT-025)
+# ==============================================================================
+def render_timeline_frame(progress=1.0):
+    """Render glowing animated horizontal timeline cursor sliding from E3 to launch."""
+    im = Image.new("RGBA", (1920, 1080), BG_COLOR)
+    draw = ImageDraw.Draw(im, "RGBA")
+    draw_grid_background(draw, cell_size=80, alpha=20)
+    
+    draw_top_bar(draw, act_num="ACT I", edl_tc="02:08:00:00", shot_id="SHOT-025")
+    draw_footer_bar(draw, "CHRONOLOGY // CRITICAL PRODUCTION MILESTONES & SHIPPING DEADLINE")
+    
+    gx1, gy1, gx2, gy2 = 200, 160, 1920 - 200, 920
+    draw.rectangle([(gx1, gy1), (gx2, gy2)], fill=PANEL_BG, outline=TEAL, width=1)
+    draw_corner_brackets(draw, gx1, gy1, gx2, gy2, arm=30, color=GOLD, width=2)
+    
+    f_head = get_font(FONT_SERIF, 32)
+    f_sub = get_font(FONT_SERIF, 22)
+    f_date = get_font(FONT_SERIF, 26)
+    
+    draw.text((gx1 + 60, gy1 + 45), "ROADMAP TO CATASTROPHE // 2014 SHIPPING TIMELINE", font=f_head, fill=GOLD)
+    draw.text((gx1 + 60, gy1 + 90), "THE NARROWING WINDOW BETWEEN MARKETING PROMISE AND CODE READINESS", font=f_sub, fill=TEAL)
+    
+    # Horizontal Timeline Axis
+    line_y = 1080 // 2 + 40
+    lx1 = gx1 + 80
+    lx2 = gx2 - 80
+    draw.line([(lx1, line_y), (lx2, line_y)], fill=(138, 194, 187, 100), width=4)
+    
+    # 4 Key Nodes
+    nodes = [
+        ("JUNE 9, 2014", "E3 WORLD PREMIERE", "Gameplay trailer stuns industry; promises 1:1 Paris & no loading screens", TEAL),
+        ("AUG 28, 2014", "2-WEEK DELAY", "Ubisoft delays launch from Oct 28 to Nov 11 to 'polish day-one experience'", GOLD),
+        ("NOV 11, 2014", "NORTH AMERICAN LAUNCH", "Embargo lifts 12 hours AFTER game is on store shelves; game is critically broken", CRIMSON),
+        ("NOV 27, 2014", "CEO FORMAL APOLOGY", "CEO Yannis Mallat issues public apology and offers free AAA games to players", GOLD)
+    ]
+    
+    step_w = (lx2 - lx1) / 3
+    curr_x = lx1 + (lx2 - lx1) * min(progress * 1.25, 1.0)
+    
+    for i, (date_str, title_str, desc_str, col) in enumerate(nodes):
+        nx = int(lx1 + i * step_w)
+        reached = curr_x >= nx
+        node_col = col if reached else MUTED_GRAY
+        
+        # Circle on line
+        draw.ellipse([(nx - 14, line_y - 14), (nx + 14, line_y + 14)], fill=(18, 23, 25), outline=node_col, width=3)
+        if reached:
+            draw.ellipse([(nx - 6, line_y - 6), (nx + 6, line_y + 6)], fill=node_col)
+            
+        # Top label (Date)
+        draw.text((nx - 80, line_y - 65), date_str, font=f_date, fill=node_col)
+        
+        # Bottom card
+        by = line_y + 35
+        card_w = 280
+        draw.rectangle([(nx - card_w // 2, by), (nx + card_w // 2, by + 160)], fill=(16, 20, 24, 220), outline=node_col, width=1)
+        draw.text((nx - card_w // 2 + 15, by + 15), title_str, font=get_font(FONT_SERIF, 20), fill=GOLD if reached else MUTED_GRAY)
+        
+        lines = wrap_text(draw, desc_str, get_font(FONT_SERIF, 17), card_w - 30)
+        for li, l in enumerate(lines[:3]):
+            draw.text((nx - card_w // 2 + 15, by + 55 + li * 24), l, font=get_font(FONT_SERIF, 17), fill=WHITE if reached else MUTED_GRAY)
+            
+    # Cursor head
+    draw.line([(int(curr_x), line_y - 30), (int(curr_x), line_y + 30)], fill=WHITE, width=2)
+    
+    return im.convert("RGB")
+
+# ==============================================================================
+# 14. FINANCIAL IMPACT: UBISOFT MARKET CAP EVAPORATION (SHOT-054)
+# ==============================================================================
+def render_market_cap_frame(progress=1.0):
+    """Render financial market capitalization crash (-9.1% drop post-launch)."""
+    im = Image.new("RGBA", (1920, 1080), BG_COLOR)
+    draw = ImageDraw.Draw(im, "RGBA")
+    draw_grid_background(draw, cell_size=80, alpha=20)
+    
+    draw_top_bar(draw, act_num="ACT III", edl_tc="04:39:00:00", shot_id="SHOT-054")
+    draw_footer_bar(draw, "FINANCIAL VALUATION COLLAPSE // EURONEXT PARIS — UBISOFT ENTERTAINMENT S.A. (UBI.PA)")
+    
+    gx1, gy1, gx2, gy2 = 200, 150, 1920 - 200, 930
+    draw.rectangle([(gx1, gy1), (gx2, gy2)], fill=PANEL_BG, outline=CRIMSON, width=1)
+    draw_corner_brackets(draw, gx1, gy1, gx2, gy2, arm=30, color=GOLD, width=2)
+    
+    f_head = get_font(FONT_SERIF, 32)
+    f_sub = get_font(FONT_SERIF, 22)
+    f_huge = get_font(FONT_SERIF, 72)
+    
+    draw.text((gx1 + 60, gy1 + 45), "SHAREHOLDER WEALTH CONTRACTION // LAUNCH WEEK STOCK REACTION", font=f_head, fill=CRIMSON)
+    draw.text((gx1 + 60, gy1 + 90), "EURONEXT PARIS TRADING DESK  •  NOVEMBER 12 — 14, 2014", font=f_sub, fill=TEAL)
+    
+    # Left: Big bold numbers
+    num_y = gy1 + 170
+    draw.text((gx1 + 60, num_y), "-9.12%", font=f_huge, fill=CRIMSON)
+    draw.text((gx1 + 60, num_y + 90), "SINGLE-DAY INTRADAY SHARE PRICE PLUNGE", font=f_sub, fill=WHITE)
+    
+    draw.text((gx1 + 60, num_y + 160), "OVER €150,000,000", font=get_font(FONT_SERIF, 46), fill=GOLD)
+    draw.text((gx1 + 60, num_y + 225), "MARKET CAPITALIZATION EVAPORATED IN 48 HOURS", font=f_sub, fill=WHITE)
+    
+    # Right: Stock Chart Graphic
+    cx1 = gx1 + 750
+    cx2 = gx2 - 60
+    cy1 = gy1 + 160
+    cy2 = gy2 - 60
+    draw.rectangle([(cx1, cy1), (cx2, cy2)], fill=(14, 18, 22, 240), outline=(138, 194, 187, 80), width=1)
+    draw.text((cx1 + 30, cy1 + 25), "UBI.PA STOCK TICKER // 5-DAY TRAJECTORY", font=f_sub, fill=TEAL)
+    
+    # Graph points
+    pts = [
+        (cx1 + 40, cy1 + 90),
+        (cx1 + 150, cy1 + 80),
+        (cx1 + 260, cy1 + 95),
+        (cx1 + 370, cy1 + 220), # Plunge on Nov 12
+        (cx1 + 480, cy1 + 380), # Nov 13 bottom
+        (cx1 + 600, cy1 + 360)  # Nov 14 slight rebound
+    ]
+    
+    # Animate line drawing
+    curr_pts = []
+    max_idx = int(len(pts) * min(progress * 1.3, 1.0))
+    for p_idx in range(max(1, max_idx)):
+        curr_pts.append(pts[p_idx])
+        
+    if len(curr_pts) >= 2:
+        for p_idx in range(len(curr_pts) - 1):
+            p1 = curr_pts[p_idx]
+            p2 = curr_pts[p_idx + 1]
+            draw.line([p1, p2], fill=CRIMSON, width=4)
+            draw.ellipse([(p1[0] - 5, p1[1] - 5), (p1[0] + 5, p1[1] + 5)], fill=GOLD)
+        draw.ellipse([(curr_pts[-1][0] - 6, curr_pts[-1][1] - 6), (curr_pts[-1][0] + 6, curr_pts[-1][1] + 6)], fill=CRIMSON)
+        
+    return im.convert("RGB")
+
+# ==============================================================================
+# 15. GRAND OUTRO EPILOGUE CREDITS (SHOT-172)
+# ==============================================================================
+def render_outro_frame(progress=1.0):
+    """Render stark broadcast documentary credits & closing epilogue."""
+    im = Image.new("RGBA", (1920, 1080), (10, 12, 14))
+    draw = ImageDraw.Draw(im, "RGBA")
+    
+    cx = 1920 // 2
+    cy = 1080 // 2 - 20
+    
+    f_title = get_font(FONT_SERIF, 44)
+    f_sub = get_font(FONT_SERIF, 24)
+    f_credit = get_font(FONT_SERIF, 20)
+    
+    alpha_prog = min(progress * 1.5, 1.0)
+    col_white = (255, 255, 255, int(255 * alpha_prog))
+    col_gold = (213, 167, 100, int(255 * alpha_prog))
+    col_teal = (138, 194, 187, int(255 * alpha_prog))
+    
+    draw.text((cx - 360, cy - 100), "AN INVESTIGATION INTO ASSASSIN'S CREED: UNITY", font=f_title, fill=col_white)
+    draw.line([(cx - 200, cy - 30), (cx + 200, cy - 30)], fill=col_gold, width=2)
+    draw.text((cx - 280, cy), "PRODUCED IN ACCORDANCE WITH LEMiNO DOCUMENTARY STANDARDS", font=f_sub, fill=col_teal)
+    draw.text((cx - 150, cy + 60), "15:00.00 MASTER EPISODE // 2026", font=f_credit, fill=col_gold)
+    
+    return im.convert("RGB")
+
+
 def render_clip_to_mp4(frame_func, duration_sec, out_mp4, fps=30):
     """Render a dynamic animated motion graphic sequence to an MP4 video clip."""
     os.makedirs(os.path.dirname(out_mp4), exist_ok=True)
@@ -787,16 +1066,18 @@ def render_clip_to_mp4(frame_func, duration_sec, out_mp4, fps=30):
 def generate_shot_graphic_clip(shot, out_path):
     """
     Selects the exact appropriate broadcast motion graphic composition
-    with deterministic Shot ID binding and renders it to 1080p MP4.
+    with strict deterministic Shot ID binding.
+    Returns out_path if a dedicated graphic exists, or None if the shot
+    should be cut from authentic documentary B-roll footage.
     """
     sid = shot["id"].upper()
     dur = shot["duration"]
     stype = shot["type"]
     gfx = shot["graphics"]
     vis = shot["visual"]
+    s_tc = shot.get("start_tc", "00:00:00:00")
     
     # 1. Deterministic Explicit Shot ID Mapping
-    s_tc = shot.get("start_tc", "00:00:00:00")
     if sid in ["SHOT-001", "SHOT-002", "SHOT-003"]:
         return render_clip_to_mp4(render_grand_title_frame, dur, out_path)
         
@@ -805,9 +1086,21 @@ def generate_shot_graphic_clip(shot, out_path):
         
     if sid in ["SHOT-012", "SHOT-013"]:
         return render_clip_to_mp4(lambda p: render_graphic_broll_blueprint(p, shot_id=sid, edl_tc=s_tc), dur, out_path)
+
+    if sid in ["SHOT-016"]:
+        return render_clip_to_mp4(render_crowd_density_frame, dur, out_path)
+
+    if sid in ["SHOT-020"]:
+        return render_clip_to_mp4(render_caroline_miousse_frame, dur, out_path)
+
+    if sid in ["SHOT-025"]:
+        return render_clip_to_mp4(render_timeline_frame, dur, out_path)
         
     if sid in ["SHOT-043", "SHOT-044", "SHOT-045"]:
         return render_clip_to_mp4(render_digital_foundry_frame, dur, out_path)
+
+    if sid in ["SHOT-054"]:
+        return render_clip_to_mp4(render_market_cap_frame, dur, out_path)
         
     if sid in ["SHOT-064", "SHOT-065"]:
         return render_clip_to_mp4(render_cpu_architecture_frame, dur, out_path)
@@ -830,51 +1123,33 @@ def generate_shot_graphic_clip(shot, out_path):
     if sid in ["SHOT-145", "SHOT-146"]:
         return render_clip_to_mp4(render_grand_title_frame, dur, out_path)
 
-    # 2. Content & Keyword Fallback Rules
-    if any(k in (gfx + vis + stype).lower() for k in ["digital foundry", "15.2 fps", "15 fps", "frame-rate", "framerate", "fps drop"]):
-        return render_clip_to_mp4(render_digital_foundry_frame, dur, out_path)
-        
-    if any(k in (gfx + vis + stype).lower() for k in ["jaguar", "8-core", "cpu", "microprocessor", "thread saturation"]):
-        return render_clip_to_mp4(render_cpu_architecture_frame, dur, out_path)
-        
-    if any(k in (gfx + vis + stype).lower() for k in ["apology", "yannis mallat", "open letter", "diminished by bugs"]):
-        return render_clip_to_mp4(render_archival_apology_frame, dur, out_path)
-        
-    if any(k in (gfx + vis + stype).lower() for k in ["free game", "waiver", "class action", "concessions", "far cry 4"]):
-        return render_clip_to_mp4(render_archival_free_game_frame, dur, out_path)
-        
-    if any(k in (gfx + vis + stype).lower() for k in ["sales", "syndicate", "slump", "-40%", "market", "collapse"]):
-        return render_clip_to_mp4(render_sales_comparison_frame, dur, out_path)
-        
-    if any(k in (gfx + vis).lower() for k in ["bastille", "14 july 1789", "engraving"]):
-        return render_clip_to_mp4(render_bastille_frame, dur, out_path)
-        
-    if any(k in (gfx + vis + stype).lower() for k in ["blueprint", "anvilnext", "interior ratio", "1:1 scale", "photogrammetry"]):
-        return render_clip_to_mp4(render_graphic_broll_blueprint, dur, out_path)
-        
-    # 3. Chapter Card
-    if "Transition" in stype or "Chapter" in stype or "ACT " in gfx.upper():
+    if sid in ["SHOT-172"]:
+        return render_clip_to_mp4(render_outro_frame, dur, out_path)
+
+    # 2. Act Chapter Cards (Strictly on Chapter/Transition shots only)
+    if sid in ["SHOT-009", "SHOT-028", "SHOT-055", "SHOT-086", "SHOT-119", "SHOT-144"]:
         act_lbl = "ACT // " + sid
-        if "ACT I" in gfx.upper(): act_lbl = "ACT I"
-        elif "ACT II" in gfx.upper(): act_lbl = "ACT II"
-        elif "ACT III" in gfx.upper(): act_lbl = "ACT III"
-        elif "ACT IV" in gfx.upper(): act_lbl = "ACT IV"
-        elif "ACT V" in gfx.upper(): act_lbl = "ACT V"
-        elif "ACT VI" in gfx.upper(): act_lbl = "ACT VI"
+        if sid == "SHOT-009": act_lbl = "ACT I"
+        elif sid == "SHOT-028": act_lbl = "ACT II"
+        elif sid == "SHOT-055": act_lbl = "ACT III"
+        elif sid == "SHOT-086": act_lbl = "ACT IV"
+        elif sid == "SHOT-119": act_lbl = "ACT V"
+        elif sid == "SHOT-144": act_lbl = "ACT VI"
         
         act_title = gfx if gfx else "INVESTIGATIVE DOSSIER"
         act_sub = vis[:60] if vis else "PARIS 1789 — 2019"
         return render_clip_to_mp4(lambda p: render_chapter_frame(act_lbl, act_title, act_sub, p), dur, out_path)
         
-    # 4. Typography Quote Card
-    if "Typography" in stype or "Quote" in stype or (gfx.startswith("“") or gfx.startswith('"')):
+    # 3. Typography Quote Cards (Only when quote marks explicitly appear in graphics or visual)
+    if ("Typography" in stype or "Quote" in stype) and (gfx.startswith("“") or gfx.startswith('"') or vis.startswith("“") or vis.startswith('"')):
         clean_quote = gfx.replace('“', '"').replace('”', '"')
-        if not clean_quote:
+        if not clean_quote or len(clean_quote) < 5:
             clean_quote = vis
         return render_clip_to_mp4(lambda p: render_typography_frame(clean_quote, f"{sid} // LEMINO DOSSIER", p), dur, out_path)
         
-    # Fallback to authentic LEMiNO blueprint frame
-    return render_clip_to_mp4(render_graphic_broll_blueprint, dur, out_path)
+    # STRICT RULE: No fallback to blueprint!
+    # Returns None so caller cuts from authentic high-res documentary B-roll footage!
+    return None
 
 if __name__ == "__main__":
     print("Testing generate_shot_graphic_clip...")
