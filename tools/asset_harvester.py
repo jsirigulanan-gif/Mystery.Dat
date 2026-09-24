@@ -167,9 +167,10 @@ def main():
             print(f"- {s['id']}: [{s['type']}] ({s['duration']}s) -> Query: '{query}'")
         return
 
+    limit = args.limit if args.limit > 0 else len(yt_shots)
     processed = 0
     for s in yt_shots:
-        if processed >= args.limit:
+        if processed >= limit:
             break
         download_and_cut_shot(s, args.output_dir)
         processed += 1
