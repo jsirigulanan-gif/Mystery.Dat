@@ -1,0 +1,28 @@
+# Video files & renders
+**/renders/
+master_episode/
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.wmv
+
+# Large raw footage
+**/assets/footage/
+**/raw/
+**/processed/
+
+# Node & package dependencies
+**/node_modules
+node_modules
+.npm/
+package-lock.json
+
+# Cache and logs
+.tmp/
+*.log
+.thumbnails/
+.system_generated/
+__pycache__/
+*.pyc
+.DS_Store

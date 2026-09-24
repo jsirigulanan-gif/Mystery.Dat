@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <template>
+    <style>
+      @font-face { font-family: Thai; src: url('assets/thai.ttf'); }
+      @font-face { font-family: ThaiSerif; src: url('assets/serif-thai.ttf'); }
+      @font-face { font-family: Stone; src: url('assets/serif.ttf'); }
+      * { box-sizing: border-box; }
+      #root {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #121719;
+        color: #eee6d3;
+        font-family: Thai, sans-serif;
+      }
+      .bg-container {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .bg-video {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+        filter: contrast(1.12) brightness(0.68) sepia(0.15);
+      }
+      .overlay-grid {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 45% 50%, rgba(18,23,25,0.25) 0%, rgba(18,23,25,0.92) 80%);
+      }
+      .top-bar {
+        position: absolute;
+        top: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: #8ac2bb;
+      }
+      .copy {
+        position: absolute;
+        left: 118px;
+        top: 220px;
+        width: 880px;
+        z-index: 10;
+      }
+      .eyebrow {
+        font-size: 23px;
+        letter-spacing: 4px;
+        color: #b6a183;
+        margin-bottom: 20px;
+      }
+      .copy h1 {
+        font-family: ThaiSerif, serif;
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 1.35;
+        margin: 0 0 24px 0;
+        color: #eee6d3;
+      }
+      .rule {
+        height: 2px;
+        width: 140px;
+        background: #8ac2bb;
+        transform-origin: left center;
+        margin-bottom: 28px;
+      }
+      .copy p {
+        font-size: 32px;
+        line-height: 1.65;
+        margin: 14px 0;
+        color: #dcd2be;
+      }
+      .stat-panel {
+        position: absolute;
+        right: 118px;
+        top: 220px;
+        background: rgba(18,23,25,0.85);
+        border: 1px solid #8ac2bb;
+        padding: 30px;
+        width: 380px;
+        z-index: 10;
+      }
+      .stat-title {
+        font-size: 18px;
+        letter-spacing: 3px;
+        color: #8ac2bb;
+        margin-bottom: 15px;
+      }
+      .stat-row {
+        margin: 15px 0;
+        border-bottom: 1px solid rgba(138,194,187,0.2);
+        padding-bottom: 10px;
+      }
+      .stat-value {
+        font-family: Stone, serif;
+        font-size: 36px;
+        color: #eee6d3;
+      }
+      .stat-desc {
+        font-size: 18px;
+        color: #b6a183;
+        margin-top: 4px;
+      }
+      .footer {
+        position: absolute;
+        bottom: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: #b6a183;
+        letter-spacing: 2px;
+      }
+    </style>
+    <div id="root" data-composition-id="scene4" data-width="1920" data-height="1080" data-duration="30">
+      <div class="bg-container">
+        <video id="video-ascent" class="bg-video clip" src="assets/footage/processed/04_climbing_moss_wall.mp4" muted playsinline data-start="0" data-duration="30" data-layout-allow-overflow=""></video>
+        <div class="overlay-grid"></div>
+      </div>
+      <div class="top-bar">
+        <span>ACT I : THE BARREN EDEN</span>
+        <span>PART 04 / 05</span>
+      </div>
+      <div class="copy">
+        <div class="eyebrow">THE PERILOUS ASCENT</div>
+        <h1>การปีนแนวดิ่ง<br>10 นาทีมหาโหด</h1>
+        <div class="rule"></div>
+        <p class="p1">การขึ้นสู่ยอดศาลเจ้าไม่ใช่สิ่งที่เกมเปิดให้เดินขึ้นไปง่ายๆ</p>
+        <p class="p2">ผู้เล่นต้องฟาร์มหางกิ้งก่าเงินสะสมหลอดความอึดข้ามรอบ</p>
+        <p class="p3" style="color:#8ac2bb; font-size:28px; margin-top:20px;">เพื่อไต่กำแพงหินมอสที่ไร้จุดพัก... พลาดก้าวเดียวคือความตาย</p>
+      </div>
+      <div class="stat-panel">
+        <div class="stat-title">REQUIREMENTS</div>
+        <div class="stat-row">
+          <div class="stat-value">NG+ 4–5</div>
+          <div class="stat-desc">รอบการเล่นซ้ำสะสมค่า Stamina</div>
+        </div>
+        <div class="stat-row" style="border:none;">
+          <div class="stat-value">10 MINS</div>
+          <div class="stat-desc">เวลาปีนป่ายกำแพงอย่างต่อเนื่อง</div>
+        </div>
+      </div>
+      <div class="footer">
+        <span>การสำรวจระดับชุมชน (COMMUNITY EXPEDITION)</span>
+        <span>ยอดหอคอยศิลา</span>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo('.bg-video', { scale: 1.05 }, { scale: 1.12, duration: 30, ease: 'none' }, 0);
+      tl.fromTo('.copy', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 1.5, ease: 'power2.out' }, 0.5);
+      tl.fromTo('.stat-panel', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1.5, ease: 'power2.out' }, 1.2);
+      tl.fromTo('.rule', { scaleX: 0 }, { scaleX: 1, duration: 1.2, ease: 'power2.out' }, 1.8);
+      tl.fromTo('.p1', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 2.6);
+      tl.fromTo('.p2', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 7.5);
+      tl.fromTo('.p3', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 12.5);
+      tl.to('#root', { opacity: 0, duration: 0.8, ease: 'power1.in' }, 29.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['scene4'] = tl;
+    </script>
+  </template>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <template>
+    <style>
+      @font-face { font-family: Thai; src: url('assets/thai.ttf'); }
+      @font-face { font-family: ThaiSerif; src: url('assets/serif-thai.ttf'); }
+      @font-face { font-family: Stone; src: url('assets/serif.ttf'); }
+      * { box-sizing: border-box; }
+      #root {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #121719;
+        color: #eee6d3;
+        font-family: Thai, sans-serif;
+      }
+      .bg-container {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .bg-video {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+        filter: contrast(1.05) brightness(0.60) sepia(0.18);
+      }
+      .overlay-grid {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 75% 50%, rgba(18,23,25,0.42) 0%, rgba(18,23,25,0.92) 85%);
+      }
+      .top-bar {
+        position: absolute;
+        top: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: #8ac2bb;
+      }
+      .badge {
+        display: inline-block;
+        border: 1px solid #8ac2bb;
+        padding: 4px 12px;
+        font-size: 18px;
+        color: #8ac2bb;
+        margin-left: 16px;
+        border-radius: 2px;
+      }
+      .copy {
+        position: absolute;
+        left: 118px;
+        top: 200px;
+        width: 860px;
+        z-index: 10;
+      }
+      .eyebrow {
+        font-size: 22px;
+        letter-spacing: 4px;
+        color: #b6a183;
+        margin-bottom: 18px;
+      }
+      .copy h1 {
+        font-family: ThaiSerif, serif;
+        font-size: 70px;
+        font-weight: 400;
+        line-height: 1.35;
+        margin: 0 0 20px 0;
+        color: #eee6d3;
+      }
+      .rule {
+        height: 2px;
+        width: 140px;
+        background: #8ac2bb;
+        transform-origin: left center;
+        margin-bottom: 24px;
+      }
+      .copy p {
+        font-size: 30px;
+        line-height: 1.65;
+        margin: 12px 0;
+        color: #dcd2be;
+      }
+      .debug-card {
+        position: absolute;
+        right: 118px;
+        top: 210px;
+        width: 660px;
+        background: rgba(18, 23, 25, 0.90);
+        border: 1px solid rgba(138, 194, 187, 0.35);
+        border-radius: 4px;
+        padding: 26px;
+        z-index: 10;
+        box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+      }
+      .debug-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        color: #8ac2bb;
+        border-bottom: 1px solid rgba(138, 194, 187, 0.25);
+        padding-bottom: 12px;
+        margin-bottom: 16px;
+        letter-spacing: 1.5px;
+      }
+      .debug-row {
+        font-family: monospace;
+        font-size: 19px;
+        line-height: 1.8;
+        color: #e2d7c3;
+        display: flex;
+        justify-content: space-between;
+      }
+      .debug-row .key { color: #b6a183; }
+      .debug-row .val { color: #d5a764; font-weight: bold; }
+      .footer {
+        position: absolute;
+        bottom: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: #b6a183;
+        letter-spacing: 2px;
+      }
+    </style>
+    <div id="root" data-composition-id="scene1" data-width="1920" data-height="1080" data-duration="20">
+      <div class="bg-container">
+        <video id="video-emu" class="bg-video clip" src="assets/footage/processed/01_melbourne_2008.mp4" muted playsinline data-start="0" data-duration="20" data-layout-allow-overflow=""></video>
+        <div class="overlay-grid"></div>
+      </div>
+      <div class="top-bar">
+        <span>ACT III : THE DIGITAL HERMITS</span>
+        <span>PART 01 / 05 <span class="badge">PCSX2 HACKING TOOLS</span></span>
+      </div>
+      <div class="copy">
+        <div class="eyebrow">ปี 2008 เมลเบิร์น ประเทศออสเตรเลีย</div>
+        <h1>นักพรตดิจิทัล<br>โนมัด โคลอสซัส</h1>
+        <div class="rule"></div>
+        <p class="p1">ขณะที่โลกของเกมก้าวเข้าสู่ยุคกราฟิก HD ของ PS3</p>
+        <p class="p2">ชายคนหนึ่งเลือกที่จะอยู่กับดินแดนต้องห้ามของ PS2</p>
+        <p class="p3" style="color:#8ac2bb; font-size:26px; margin-top:16px;">เขาไม่ได้มองเกมเป็นของเล่น แต่มองเป็น "แหล่งโบราณคดีดิจิทัล"</p>
+      </div>
+      <div class="debug-card">
+        <div class="debug-header">
+          <span>CONSOLE MEMORY INJECTION</span>
+          <span>PCSX2 v0.9.6</span>
+        </div>
+        <div class="debug-row"><span class="key">INVESTIGATOR:</span><span class="val">NOMAD COLOSSUS</span></div>
+        <div class="debug-row"><span class="key">LOCATION:</span><span class="val">MELBOURNE, AUSTRALIA</span></div>
+        <div class="debug-row"><span class="key">METHOD:</span><span class="val">FREE-CAM / MEMORY HACK</span></div>
+        <div class="debug-row"><span class="key">CAMERA OFFSET:</span><span class="val">X=-412.8 Y=+104.2 Z=+890.1</span></div>
+        <div style="border-top:1px solid rgba(138,194,187,0.25); margin-top:14px; padding-top:10px; color:#8ac2bb; font-family:monospace; font-size:17px;">
+          &gt; INVISIBLE COLLISION BOUNDARIES: BYPASSED
+        </div>
+      </div>
+      <div class="footer">
+        <span>บันทึกการสืบสวน: จุดเริ่มต้นของการออกนอกแผนที่</span>
+        <span>DIGITAL ARCHAEOLOGY EXPEDITION</span>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo('.bg-video', { scale: 1.05 }, { scale: 1.12, duration: 20, ease: 'none' }, 0);
+      tl.fromTo('.copy', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 1.5, ease: 'power2.out' }, 0.5);
+      tl.fromTo('.rule', { scaleX: 0 }, { scaleX: 1, duration: 1.2, ease: 'power2.out' }, 1.8);
+      tl.fromTo('.p1', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 2.5);
+      tl.fromTo('.p2', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 5.5);
+      tl.fromTo('.p3', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 8.5);
+      tl.fromTo('.debug-card', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1.5, ease: 'power2.out' }, 3.5);
+      tl.to('#root', { opacity: 0, duration: 0.8, ease: 'power1.in' }, 19.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['scene1'] = tl;
+    </script>
+  </template>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "charcoal_teal": {
+    "name": "Canonical LEMiNO (Charcoal & Turquoise)",
+    "bg_color": "#121719",
+    "primary_accent": "#8ac2bb",
+    "secondary_accent": "#d5a764",
+    "text_primary": "#ffffff",
+    "text_body": "#eee6d3",
+    "card_bg": "rgba(18, 23, 25, 0.86)",
+    "card_border": "rgba(138, 194, 187, 0.35)",
+    "vignette": "radial-gradient(circle at 75% 50%, rgba(18,23,25,0.40) 0%, rgba(18,23,25,0.92) 85%)",
+    "video_filter": "contrast(1.08) brightness(0.55) sepia(0.20)"
+  },
+  "sepia_noir": {
+    "name": "Archival Sepia Noir",
+    "bg_color": "#16120e",
+    "primary_accent": "#c59b6d",
+    "secondary_accent": "#e0b080",
+    "text_primary": "#ffffff",
+    "text_body": "#ece4d4",
+    "card_bg": "rgba(22, 18, 14, 0.88)",
+    "card_border": "rgba(197, 155, 109, 0.35)",
+    "vignette": "radial-gradient(circle at 75% 50%, rgba(22,18,14,0.35) 0%, rgba(22,18,14,0.94) 85%)",
+    "video_filter": "contrast(1.12) brightness(0.50) sepia(0.35)"
+  },
+  "deep_navy": {
+    "name": "Cold War / Government Blue",
+    "bg_color": "#0b111a",
+    "primary_accent": "#56c2d6",
+    "secondary_accent": "#89dceb",
+    "text_primary": "#ffffff",
+    "text_body": "#d6e2e8",
+    "card_bg": "rgba(11, 17, 26, 0.88)",
+    "card_border": "rgba(86, 194, 214, 0.35)",
+    "vignette": "radial-gradient(circle at 75% 50%, rgba(11,17,26,0.40) 0%, rgba(11,17,26,0.92) 85%)",
+    "video_filter": "contrast(1.10) brightness(0.52) hue-rotate(190deg) saturate(0.7)"
+  },
+  "crimson_cyber": {
+    "name": "Forensic Threat / Crimson Dark",
+    "bg_color": "#140b0e",
+    "primary_accent": "#e64553",
+    "secondary_accent": "#f5a97f",
+    "text_primary": "#ffffff",
+    "text_body": "#eee6d3",
+    "card_bg": "rgba(20, 11, 14, 0.88)",
+    "card_border": "rgba(230, 69, 83, 0.35)",
+    "vignette": "radial-gradient(circle at 75% 50%, rgba(20,11,14,0.40) 0%, rgba(20,11,14,0.94) 85%)",
+    "video_filter": "contrast(1.15) brightness(0.52) saturate(0.8)"
+  },
+  "alien_industrial": {
+    "name": "Weyland-Yutani / Industrial Acid Green",
+    "bg_color": "#0d1211",
+    "primary_accent": "#39e58c",
+    "secondary_accent": "#e5a93c",
+    "text_primary": "#ffffff",
+    "text_body": "#e0ede6",
+    "card_bg": "rgba(13, 18, 17, 0.88)",
+    "card_border": "rgba(57, 229, 140, 0.35)",
+    "vignette": "radial-gradient(circle at 75% 50%, rgba(13,18,17,0.40) 0%, rgba(13,18,17,0.94) 85%)",
+    "video_filter": "contrast(1.15) brightness(0.52) hue-rotate(15deg) saturate(0.85)"
+  }
+}

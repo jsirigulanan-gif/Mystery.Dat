@@ -1,0 +1,208 @@
+﻿Shadow of the Colossus: The 7-Year Quest for the 17th Colossus & The Secret Garden (2005–2018)
+A LEMiNO-Style 30-Minute Master Investigative Documentary Script
+Project Metadata & Production Specs
+* Runtime: 30:00 (6 Acts)
+* Style: LEMiNO Minimalist Investigative (Bleached desert sepia, weathered stone grey, mist-shrouded turquoise palette, slow aerial topological wireframes, forensic memory hex dumps, haunting ambient strings and lone acoustic guitars).
+* Core Investigation: The greatest community expedition and digital archaeological search in gaming history. How Fumito Ueda's empty masterpiece Shadow of the Colossus hid a poisoned Secret Garden at the summit of a shrine, how a rumor of a fabled '17th Colossus' inspired Australian researcher Nomad Colossus and a legion of 'Secret Seekers' to spend seven years cataloging every square inch of out-of-bounds geometry, the excavation of 8 cut titans from the game's binary code, and how Bluepoint Games immortalized their journey 13 years later.
+ACT I: THE BARREN EDEN (00:00 - 05:00)
+Visual: Slow aerial tracking shot over the desolate, sun-bleached steppes of the Forbidden Land in Shadow of the Colossus (PS2 480p raw feed). The wind howls across empty limestone canyons. A lone warrior on horseback rides into the shadow of the colossal Shrine of Worship.
+
+
+Narration (TH/EN):
+"ในวันที่ 18 ตุลาคม ปี 2005 ค่ายพัฒนา Team Ico ภายใต้การนำของผู้กำกับ ฟูมิโตะ อุเอดะ (Fumito Ueda) ได้ปล่อยผลงานชิ้นเอกที่ท้าทายขนบของวงการเกมลงบนเครื่อง PlayStation 2 นั่นคือ 'Shadow of the Colossus'... ท่ามกลางยุคที่เกมเปิดโลกพยายามยัดเยียดเมือง ร้านค้า และเควสต์ย่อยลงไป อุเอดะกลับเลือกใช้ปรัชญาที่เรียกว่า 'Design by Subtraction' หรือการออกแบบด้วยการตัดทอน: โลกของเกมไม่มีผู้คน ไม่มีหมู่บ้าน ไม่มีศัตรูระดับล่าง มีเพียงผืนดินต้องห้ามอันรกร้าง ยักษ์ศิลา 16 ตัวที่หลับใหล และความเงียบงันอันบาดลึก"
+
+
+"On October 18, 2005, director Fumito Ueda and Team Ico released an artistic anomaly on the PlayStation 2: Shadow of the Colossus. At a time when open-world games competed to pack maps with bustling towns, merchants, and endless quest markers, Ueda embraced an austere philosophy known as 'design by subtraction.' The Forbidden Land contained no NPCs, no dungeons, and no common enemies. There was only a vast, wind-swept purgatory, sixteen roaming stone titans, and a suffocating, beautiful silence."
+
+
+Audio: Howling desert wind, solitary acoustic guitar picking a slow, melancholic chord progression.
+Source/Footage Citation: Shadow of the Colossus PS2 Original Intro (2005) | GDC 2006: Fumito Ueda on Design by Subtraction.
+
+
+Visual: Cinematic tilt up the sheer, thousand-foot vertical wall of the Shrine of Worship. Wander scaling the moss-covered brickwork. A stamina gauge depleting and refreshing. Wander reaches the overgrown ruins of the Secret Garden.
+
+
+Narration (TH/EN):
+"ใจกลางแผนที่ มีหอคอยศิลาขนาดมหึมาที่เรียกว่า 'ศาลเจ้าแห่งการบูชา' (Shrine of Worship) บนยอดสุดของมันที่ลอยอยู่เหนือม่านเมฆ มีสิ่งก่อสร้างปริศนาซ่อนอยู่: สวนลอยฟ้า 'Secret Garden' ซึ่งผู้เล่นทั่วไปไม่มีทางปีนขึ้นไปถึงได้ หากไม่เล่นเกมซ้ำไปมา 4-5 รอบเพื่อเก็บหางกิ้งก่าสีเงินเพิ่มหลอดความอึดจนเต็มพิกัด... แต่เมื่อปีนขึ้นไปถึงและกินผลไม้ในสวน หลอดเลือดและความอึดของตัวเอกกลับหดสั้นลง สวนสวรรค์แห่งนี้คือสวนยาพิษ... และสิ่งนี้เองที่จุดประกายคำถามที่หลอกหลอนคนทั้งโลก: หากผู้พัฒนายอมสร้างสวนขนาดมหึมาที่ผู้เล่น 99% ไม่มีวันได้เห็น แล้วในความว่างเปล่าอันไพศาลของแผนที่นี้ ยังมีอะไรซ่อนอยู่อีกบ้าง?"
+
+
+"At the geographic center of this world stood the Shrine of Worship, its monolithic spire piercing the clouds. High above lay a mythical hanging terrace: The Secret Garden. Reaching it was nearly impossible. A player had to complete four to five consecutive New Game+ playthroughs, hunting hundreds of shimmering silver-tailed lizards to max out their stamina gauge, followed by a perilous ten-minute vertical ascent. Yet, eating the glowing fruit at the summit did not grant godhood—it permanently drained Wander's health and stamina. The garden was poisoned. And that bitter revelation sparked a question that would consume the community for over a decade: If the developers took the time to build a poisoned paradise that 99% of players would never reach, what else had they hidden in the mist?"
+
+
+Audio: Low, eerie ethereal choir pads, descending into complete silence.
+ACT II: THE LEGEND OF THE 17TH (05:00 - 10:00)
+Visual: Forensic scan of classic mid-2000s forums: GameFAQs, PlayStation Underground, NeoGAF threads from November 2005. CRT monitor glow. Blurry camcorder screenshots circulating on internet forums purporting to show a winged black shadow over the Great Dam.
+
+
+Narration (TH/EN):
+"ในช่วงปลายปี 2005 บนเว็บบอร์ดเกมทั่วโลก ข่าวลือหนึ่งได้แพร่กระจายราวกับไฟลามทุ่ง: 'ยักษ์ตัวที่ 17' (The 17th Colossus)... ผู้เล่นเริ่มสังเกตเห็นสิ่งผิดปกติมากมาย ศาลเจ้าแปดเหลี่ยมลึกลับที่ไม่มีศัตรูอยู่ใกล้ ซุ้มประตูหินแกะสลักอย่างวิจิตรแต่ถูกก้อนหินปิดตาย และเขื่อนโบราณขนาดมหึมาทางตอนเหนือที่ดูเหมือนเป็นทางเข้าสู่พื้นที่ลับ มีคนอ้างว่าหากขี่ม้าอะโกรอบแผนที่ 100 รอบ หรือนำผลไม้พิษไปวางตามจุดที่กำหนด จะปลดล็อกการต่อสู้ครั้งสุดท้าย"
+
+
+"By late 2005, gaming forums ignited with a persistent myth: The 17th Colossus. Players pointed to bizarre anomalies across the landscape: octagonal stone save shrines standing isolated in desolate canyons, elaborately carved stone arches sealed by immovable boulders, and a colossal ancient dam in the northern mountains that seemed built to contain an aquatic leviathan. Fictitious walkthroughs flooded GameFAQs, claiming that circling the map a hundred times or placing poisoned fruit at specific coordinates would summon a final secret titan."
+
+
+Audio: Muffled ambient keyboard typing, tense electronic pulse.
+Source/Footage Citation: GameFAQs Shadow of the Colossus Secrets Archive (2005) | Eurogamer: The Myth of the 17th Colossus.
+
+
+Visual: Page turns through the rare Japanese artbook Wanda to Kyozō Official Complete Guide. Concept sketches of bizarre discarded creatures: a sabre-toothed boar with stone plating, a flying pterosaur, a massive spider. Pre-release E3 2004 trailer footage of cut Colossi.
+
+
+Narration (TH/EN):
+"สิ่งที่ทำให้ไฟแห่งการค้นหายิ่งลุกโชน คือหนังสือคู่มืออย่างเป็นทางการฉบับภาษาญี่ปุ่น ซึ่งเปิดเผยความจริงว่า ในช่วงเริ่มต้นพัฒนา Team Ico เคยวางแผนจะสร้างยักษ์มากถึง 48 ตัว ก่อนจะถูกตัดทอนลงเหลือ 24 ตัว และท้ายที่สุดเหลือเพียง 16 ตัวในเกมตัวเต็ม... ภาพร่างของยักษ์ที่ถูกตัดทิ้ง เช่น 'Sirius' ยักษ์หมูป่าเขี้ยวเขี้ยว และ 'Pholux' ยักษ์ปีศาจ มีอยู่จริงในเอกสาร ทำให้ผู้เล่นต่างปักใจเชื่อว่า ข้อมูลของยักษ์ตัวที่ถูกตัดทิ้ง อาจยังคงหลับใหลอยู่ที่ไหนสักแห่งในแผ่น DVD ของ PS2"
+
+
+"The obsession was legitimized when the Japanese Official Complete Guide hit shelves. In an interview, Team Ico revealed that the project initially planned for 48 Colossi, whittled down to 24, and finally reduced to 16 for the commercial release. Concept sketches of cut titans—like the sabre-toothed boar 'Sirius' and the winged devil 'Pholux'—were laid bare. To the community, this was proof enough: the code, or at least the digital bones, of a seventeenth beast were still trapped on that 4.7-gigabyte DVD."
+
+
+Audio: Dramatic orchestral strings swelling, sudden percussion hit.
+ACT III: THE DIGITAL HERMITS: NOMAD COLOSSUS (10:00 - 16:00)
+Visual: Transition to Melbourne, Australia, circa 2008. Screen captures of the PCSX2 emulator running with memory hacking tools. A wireframe camera detachment. The YouTube avatar of Nomad Colossus.
+
+
+Narration (TH/EN):
+"ในปี 2008 ขณะที่โลกของเกมได้ก้าวข้ามสู่ยุคกราฟิก HD ของ PS3 และ Xbox 360 แต่สำหรับเกมเมอร์ชาวออสเตรเลียคนหนึ่งที่ใช้ชื่อว่า 'Nomad Colossus' การเดินทางของเขาเพิ่งจะเริ่มต้นขึ้น... โนมัดไม่ได้มอง Shadow of the Colossus เป็นเพียงเกม แต่เขามองมันเป็น 'แหล่งโบราณคดีดิจิทัล' ด้วยการใช้โปรแกรมจำลองคอนโซลและการแฮกพิกัดกล้อง โนมัดและกลุ่มผู้ค้นหาที่เรียกตัวเองว่า 'The Secret Seekers' เริ่มปฏิบัติการสำรวจพื้นที่นอกขอบเขต (Out-of-Bounds) อย่างเป็นระบบที่สุดเท่าที่ประวัติศาสตร์เกมเคยมีมา"
+
+
+"In 2008, as the industry transitioned to the high-definition era of the PlayStation 3, an Australian gamer operating under the moniker Nomad Colossus chose to stay behind. To Nomad, the Forbidden Land was not an entertainment product; it was an archaeological site. Utilizing the PCSX2 emulator, hex editors, and free-roam camera scripts, Nomad and an informal guild calling themselves 'The Secret Seekers' embarked on the most exhaustive out-of-bounds survey in gaming history."
+
+
+Audio: Warm, contemplative ambient piano over distant wind chimes.
+
+
+Source/Footage Citation: Nomad Colossus YouTube Channel | Beyond the Forbidden Lands | Kotaku: The Man Who Spent Years Exploring Shadow of the Colossus
+.
+	Visual: 3D teardown of PS2 Emotion Engine memory limits. Wireframe meshes of invisible collision geometry. Nomad's camera flying through solid rock into a vast hidden reservoir behind the Great Dam, discovering fully textured cliff faces, a subterranean waterfall with collision detection, and a massive dry riverbed.
+	
+
+Narration (TH/EN):
+"สิ่งที่โนมัดค้นพบสร้างความตกตะลึงให้แก่คอมมูนิตี้: ลึกเข้าไปหลังเขื่อนยักษ์และเทือกเขาทางเหนือ มีทางเดินหินที่มีระบบตรวจจับการชน (Collision Mesh) ที่ผู้เล่นสามารถเดินเหยียบได้จริง มีน้ำตกที่ถูกตัดทิ้ง และมีอารีน่าขนาดใหญ่ที่ไม่มีมอนสเตอร์อยู่... ทำไมทีมพัฒนาถึงต้องเสียเวลาคำนวณและสร้างแรงดึงดูดให้กับพื้นที่ที่อยู่ห่างจากขอบเขตที่ผู้เล่นไปถึงได้หลายกิโลเมตร? ทุกคลิปวิดีโอในซีรีส์ 'Beyond the Forbidden Lands' ของโนมัด ได้กลายเป็นปรากฏการณ์ที่มีผู้ชมติดตามนับล้านคน"
+
+
+"What Nomad uncovered defied conventional game development logic: miles beyond the northern mountain barriers lay fully rendered landscapes, complete with collision geometry that Wander could stand upon. He found abandoned river canyons, a dormant reservoir, and an empty amphitheater carved into cliffs. Why would programmers allocate precious PS2 memory to calculate collision for areas kilometers beyond any intended player boundary? Nomad's documentary series, Beyond the Forbidden Lands, became a cult phenomenon, viewed by millions who were mesmerized by the eerie poetry of this unvisited terrain."
+
+
+Audio: Rhythmic ticking pulse, deep submarine sonar echoes.
+ACT IV: THE AUTOPSY OF TEAM ICO: THE LOST TITANS (16:00 - 21:00)
+Visual: Forensic file inspection of the Shadow of the Colossus binary code. Text scrolling through memory addresses: COLOSSUS_SIRIUS, COLOSSUS_PHOLUX, COLOSSUS_YAMORI, COLOSSUS_SARU. 3D clay-render models extracted from early prototype builds.
+
+
+Narration (TH/EN):
+"ในการผ่าตัดโค้ดของตัวเกม นักขุดข้อมูลอย่าง Pikol และ Wombat ได้เจาะเข้าไปถึงไฟล์บันทึกโมเดลและพิกัดการเกิดของยักษ์โบราณ... และในที่สุด ความลับของยักษ์ที่สาบสูญทั้ง 8 ตัวก็ถูกเปิดเผย:
+
+
+1. 'Sirius' หมูป่าศิลาที่จะไล่ล่าผู้เล่นในช่องแคบ
+2. 'Pholux' ปีศาจมีปีกที่เกาะอยู่บนยอดหิน
+3. 'Yamori' ตุ๊กแกขนาดยักษ์ที่ปีนป่ายกำแพงป้อมปราการ
+4. 'Kyos' นกบินขนาดยักษ์
+5. 'Saru' ลิงยักษ์ในถ้ำลึก
+และยักษ์ตัวอื่นๆ ที่มีโค้ดแอนิเมชันหลงเหลืออยู่เป็นเศษซากในแผ่นเกม"
+
+
+"Between 2009 and 2012, data miners like Pikol dissected the game's executable binaries, uncovering raw strings of forgotten memory: internal filenames confirming eight deleted titans:
+
+
+   1. Sirius, a hyper-aggressive sabre-toothed boar intended for the northern canyon;
+   2. Pholux, a winged devil perched atop ruins;
+   3. Yamori, a wall-crawling gecko that scurried along stone bastions;
+   4. Kyos, an aerial pterosaur;
+   5. Saru, a cave-dwelling ape;
+and three others whose skeletal animation rigs were permanently buried in the game's code."
+
+
+Audio: Dark, industrial synthesis, mechanical data scraping sounds.
+Source/Footage Citation: The Cutting Room Floor: Shadow of the Colossus Unused Colossi | PlayStation 2 Emotion Engine Architecture Specs.
+
+
+Visual: Interview clips of Fumito Ueda at Tokyo Game Show and DICE Summit. Ueda speaking softly through a translator. Archival clips of the PS2 hardware overheating during Team Ico's stress testing.
+
+
+Narration (TH/EN):
+"ฟูมิโตะ อุเอดะ ได้ออกมายืนยันในการสัมภาษณ์ในเวลาต่อมาว่า ยักษ์เหล่านี้ถูกตัดทิ้งไม่ใช่เพราะความลับใดๆ แต่เป็นเพราะ 'ขีดจำกัดทางกายภาพ' ของชิป Emotion Engine และแรมขนาดเพียง 32 เมกะไบต์ของเครื่อง PS2... การจำลองเส้นขนแบบเรียลไทม์ และฟิสิกส์การเกาะจับของตัวละคร ใช้พลังการประมวลผลสูงเกินไปจนเฟรมเรตตกฮวบ... ยักษ์ตัวที่ 17 ไม่เคยมีตัวตนอยู่ในโค้ดตัวเกมสมบูรณ์... การค้นหาอันยาวนานกว่า 7 ปี ได้มาถึงทางตัน แต่สิ่งที่กลุ่ม Secret Seekers ได้สร้างขึ้น กลับยิ่งใหญ่กว่าการค้นพบมอนสเตอร์ตัวใหม่"
+
+
+"In later retrospective interviews, Fumito Ueda laid the mystery to rest. The titans were not omitted to preserve some profound secret; they were casualties of the PlayStation 2's hardware limitations. The 32 megabytes of unified RAM simply could not sustain complex inverse kinematics, procedural fur rendering, and dynamic physics for 24 creatures without bringing frame rates to single digits. There was no 17th Colossus waiting in the mist. After seven years, the search reached its definitive technological conclusion. Yet the journey had transformed from a monster hunt into something far more profound."
+
+
+Audio: Somber, slow acoustic cello solo fading into ambient mountain winds.
+ACT V: THE GREAT BRIDGE & THE EDGE OF THE WORLD (21:00 - 26:00)
+Visual: Cinematic long-take of Wander running across the enormous stone bridge connecting the outside world to the Shrine. The journey takes over 7 real-time minutes. Cloud mist rolls across the chasm below. Wander reaches the sealed entrance gates at the edge of the world.
+
+
+Narration (TH/EN):
+"หนึ่งในการเดินทางที่เป็นตำนานที่สุดของโนมัด คือการวิ่งข้าม 'สะพานมหายักษ์' (The Great Bridge) ที่ทอดยาวจากศาลเจ้าไปสู่หน้าผาสุดขอบฟ้า การวิ่งข้ามสะพานนี้ต้องใช้เวลาในชีวิตจริงถึง 7 นาทีเต็ม และเมื่อไปถึงปลายทาง ผู้เล่นจะพบกับประตูบานยักษ์ที่มีขั้นบันไดและลวดลายสถาปัตยกรรมที่ถูกเรนเดอร์ไว้อย่างประณีต แม้ว่าตามเนื้อเรื่อง ผู้เล่นจะไม่มีวันได้ข้ามสะพานนี้เลยก็ตาม"
+
+
+"Among Nomad's most iconic expeditions was his journey across The Great Bridge—a span of stone stretching so vast that sprinting its length took seven full minutes of real time. At the southern precipice, where no legitimate gameplay mechanic could ever carry the player, sat an immense entrance portal. Team Ico had fully textured its carved archways, steps, and balustrades. It was digital architecture created purely for the camera's distant horizon."
+
+
+Audio: Expansive, resonant church organ combined with gentle wind synthesizer.
+Source/Footage Citation: Nomad Colossus: Crossing the Great Bridge (YouTube) | Eurogamer Investigation: The Secret Seekers of Colossus.
+
+
+Visual: Montage of out-of-bounds landscapes from Nomad's videos: a solitary tree in the middle of a blank sea, flat polygons dissolving into floating coordinates, the green poisoned moss of the Secret Garden.
+
+
+Narration (TH/EN):
+"วิดีโอของโนมัดทำให้เกมเมอร์ทั่วโลกตระหนักถึงสิ่งหนึ่ง: เสน่ห์ที่แท้จริงของ Shadow of the Colossus ไม่ใช่การพิชิตบอส แต่มันคือ 'สุนทรียศาสตร์แห่งความโดดเดี่ยว'... การได้เดินท่องไปในดินแดนที่ไม่มีใครเคยเหยียบย่าง การยืนอยู่บนขอบผาที่ไร้เสียงเพลงประกอบ และการไว้อาลัยให้กับซากปรักหักพังที่ผู้สร้างทิ้งไว้กลางทาง... มันคือการแสวงบุญในโลกดิจิทัลที่งดงามที่สุดครั้งหนึ่งของมนุษยชาติ"
+
+
+"Nomad's work illuminated a fundamental truth: the brilliance of Shadow of the Colossus was never about the thrill of combat. It was an elegy of solitary exploration. To stand at the boundary of a digital void, looking out across polygons unrendered by lighting engines, was to experience an unprecedented form of melancholy. The Secret Seekers were not mere hackers; they were digital pilgrims grieving the lost architecture of a forgotten world."
+
+
+Audio: Deep, haunting strings building up an emotional crescendo.
+ACT VI: THE 79 RELICS & THE TRIBUTE OF BLUEPOINT (26:00 - 30:00)
+Visual: Fast-forward to February 6, 2018. 4K HDR footage of the Shadow of the Colossus Remake on PlayStation 4 Pro by Bluepoint Games. Photorealistic vegetation, majestic stone temples. The end credits roll, highlighting a dedicated line: "Special Thanks: Nomad Colossus and the Secret Seekers."
+
+
+Narration (TH/EN):
+"ในวันที่ 6 กุมภาพันธ์ ปี 2018 สตูดิโอ Bluepoint Games ได้เปิดตัวเกม Shadow of the Colossus ฉบับรีเมกใหม่หมดจดบนเครื่อง PlayStation 4... และในหน้าเครดิตผู้สร้าง บลูพอยต์ได้ใส่ข้อความขอบคุณพิเศษอย่างเป็นทางการ: 'ขอมอบความขอบคุณแด่ Nomad Colossus และกลุ่ม The Secret Seekers'... แต่นั่นไม่ใช่ของขวัญเพียงชิ้นเดียวที่พวกเขามอบให้"
+
+
+"On February 6, 2018, Bluepoint Games released their lavish ground-up remake for the PlayStation 4. Scrolling through the final credits, eagle-eyed fans spotted an extraordinary line of text: Special Thanks: Nomad Colossus and the Secret Seekers. But Bluepoint did not stop at a textual tribute. They crafted the ultimate love letter to the community."
+
+
+Audio: Lush, sweeping orchestral strings from Kow Otani's score, bright acoustic guitar.
+Source/Footage Citation: PlayStation Blog: Shadow of the Colossus PS4 Remake Behind the Scenes | Nomad Colossus Finding the 79 Coins & Sword of Dormin (2018).
+
+
+Visual: Wander discovering a small, humming golden coin hidden on an obscure cliff face. Counter ticks: 78/79 -> 79/79. A heavy stone slab beneath the Shrine of Worship grinds open. Wander descends into a subterranean chamber, walking toward a glowing altar to draw the Sword of Dormin. Final quote on screen in LEMiNO typography: "The mystery was never about finding what was missing. It was about proving how far we were willing to walk."
+
+
+Narration (TH/EN):
+"บลูพอยต์ได้แอบซ่อน 'เหรียญทองคำเปล่งประกาย' (Enlightenment Coins) จำนวน 79 เหรียญ กระจายไว้ตามซอกหิน ยอดผา และมุมลับที่สุดทั่วแผนที่ ซึ่งทั้งหมดล้วนได้รับแรงบันดาลใจมาจากจุดที่โนมัดเคยสำรวจในคลิปวิดีโอเมื่อสิบปีก่อน... เมื่อคอมมูนิตี้ร่วมมือกันตามหาครบทั้ง 79 เหรียญ ประตูลับใต้ฐานศาลเจ้าก็เปิดออก เผยให้เห็นห้องลับใต้ดินและ 'ดาบแห่งดอร์มิน' (Sword of Dormin)... ความลึกลับที่เริ่มต้นจากข่าวลือที่ไม่มีอยู่จริง ได้ถูกเติมเต็มด้วยความรักและการเดินทางอันยาวนานถึง 13 ปี... และเป็นเครื่องพิสูจน์ว่า แม้ในโลกดิจิทัลที่ว่างเปล่าที่สุด หากมีความหลงใหลของมนุษย์อยู่ มันจะไม่มีวันรกร้างว่างเปล่าอีกต่อไป"
+
+
+"Hidden across the remake's terrain were 79 golden relics, tucked into the most treacherous crevices, cliff edges, and desolate caves—the exact locations Nomad Colossus had documented years prior. When the community united to recover all 79, a subterranean door beneath the Shrine unsealed, revealing the legendary Sword of Dormin. A myth born from empty rumors was answered thirteen years later by developer reverence. It was the definitive proof that even in the emptiest digital wastelands, human curiosity can build an enduring, magnificent reality."
+
+
+Audio: Majestic grand orchestral finale, fading into a solitary wind sweep and 5 seconds of silence.
+MASTER MEDIA ASSET LIBRARY (B-ROLL & CITATIONS)
+Asset ID
+	Category
+	Description / Timestamp
+	Verified Web Link / Source Citation
+	AST-01
+	Original Game Intro
+	Shadow of the Colossus (PS2 2005) Original Cinematic Opening
+	Shadow of the Colossus PS2 Intro Footage
+	AST-02
+	Historical Retrospective
+	Eurogamer: The Quest for Shadow of the Colossus's Last Big Secret
+	Eurogamer: The Myth of the 17th Colossus
+	AST-03
+	Archaeological Channel
+	Nomad Colossus YouTube Archive: Beyond the Forbidden Lands Series
+	Nomad Colossus YouTube Channel
+	AST-04
+	Technical Data Mine
+	The Cutting Room Floor: Shadow of the Colossus Deleted Colossi & Assets
+	TCRF Shadow of the Colossus Code Analysis
+	AST-05
+	Community Investigation
+	Kotaku Profile: The Man Who Spent Years Exploring Shadow of the Colossus
+	Kotaku Nomad Colossus Profile
+	AST-06
+	Remake Resolution
+	Finding All 79 Coins & Unlocking the Sword of Dormin (PS4 Remake)
+	Nomad Colossus Sword of Dormin Video

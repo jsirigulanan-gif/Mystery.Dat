@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <template>
+    <style>
+      @font-face { font-family: Thai; src: url('assets/thai.ttf'); }
+      @font-face { font-family: ThaiSerif; src: url('assets/serif-thai.ttf'); }
+      @font-face { font-family: Stone; src: url('assets/serif.ttf'); }
+      * { box-sizing: border-box; }
+      #root {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #121719;
+        color: #eee6d3;
+        font-family: Thai, sans-serif;
+      }
+      .bg-container {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .bg-video {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+        filter: contrast(1.08) brightness(0.55) sepia(0.20);
+      }
+      .overlay-grid {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 75% 50%, rgba(18,23,25,0.40) 0%, rgba(18,23,25,0.90) 85%);
+      }
+      .scanlines {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(18, 23, 25, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+        background-size: 100% 4px;
+        pointer-events: none;
+        opacity: 0.4;
+      }
+      .top-bar {
+        position: absolute;
+        top: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: #8ac2bb;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+      }
+      .badge {
+        display: inline-block;
+        border: 1px solid #8ac2bb;
+        padding: 4px 12px;
+        font-size: 18px;
+        color: #8ac2bb;
+        margin-left: 16px;
+        border-radius: 2px;
+      }
+      .footer {
+        position: absolute;
+        bottom: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: #eee6d3;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+      }
+      .copy {
+        position: absolute;
+        left: 118px;
+        top: 220px;
+        width: 960px;
+        z-index: 10;
+      }
+      .eyebrow {
+        font-size: 24px;
+        letter-spacing: 5px;
+        color: #8ac2bb;
+        font-weight: 500;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      }
+      .copy h1 {
+        font-family: ThaiSerif, serif;
+        font-size: 78px;
+        font-weight: 400;
+        line-height: 1.45;
+        margin: 22px 0;
+        color: #ffffff;
+        text-shadow: 0 3px 12px rgba(0,0,0,0.9);
+      }
+      .copy p {
+        font-size: 34px;
+        line-height: 1.65;
+        margin: 12px 0;
+        max-width: 820px;
+        color: #eee6d3;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      }
+      .rule {
+        height: 3px;
+        width: 140px;
+        background: #8ac2bb;
+        transform-origin: left center;
+        margin: 20px 0;
+      }
+      .hud-telemetry {
+        position: absolute;
+        right: 118px;
+        top: 220px;
+        width: 440px;
+        background: rgba(18, 23, 25, 0.85);
+        border: 1px solid rgba(138, 194, 187, 0.35);
+        border-left: 3px solid #8ac2bb;
+        padding: 24px;
+        font-size: 20px;
+        line-height: 1.7;
+        color: #eee6d3;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+        z-index: 10;
+      }
+      .hud-title {
+        font-size: 19px;
+        letter-spacing: 2px;
+        color: #8ac2bb;
+        border-bottom: 1px solid rgba(138,194,187,0.25);
+        padding-bottom: 8px;
+        margin-bottom: 14px;
+      }
+      .hud-val {
+        color: #d5a764;
+        font-family: monospace;
+      }
+
+      .altitude-gauge {
+        position: absolute;
+        right: 140px;
+        top: 220px;
+        width: 380px;
+        background: rgba(18, 23, 25, 0.85);
+        border: 1px solid rgba(138, 194, 187, 0.35);
+        border-left: 3px solid #8ac2bb;
+        padding: 24px;
+        z-index: 10;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      }
+      .stamina-bar-container {
+        width: 100%;
+        height: 12px;
+        background: rgba(255,255,255,0.15);
+        border-radius: 2px;
+        margin: 14px 0 8px;
+        overflow: hidden;
+      }
+      .stamina-bar {
+        width: 92%;
+        height: 100%;
+        background: #8ac2bb;
+        transform-origin: left center;
+      }
+    </style>
+    <div id="root" data-composition-id="garden" data-width="1920" data-height="1080" data-duration="16">
+      <div class="bg-container">
+        <video id="v-garden" class="bg-video clip" muted playsinline src="assets/footage/scene3_garden_ascent.mp4" data-start="0" data-duration="480" data-layout-allow-overflow=""></video>
+        <div class="overlay-grid"></div>
+        <div class="scanlines"></div>
+      </div>
+
+      <div class="top-bar">
+        <span>VERTICAL TOPOGRAPHY // SHRINE OF WORSHIP <span class="badge">SECRET LEVEL</span></span>
+        <span>03 / 05</span>
+      </div>
+
+      <div class="copy" style="width: 880px;">
+        <div class="eyebrow">ABOVE THE SHRINE</div>
+        <h1>สวนลับ<span style="display:block">เหนือศาลเจ้า</span></h1>
+        <div class="rule"></div>
+        <p>สิ่งที่ซ่อนอยู่บนยอดสูง ทำให้โลกที่เงียบงันดูมีความลับ</p>
+        <p style="color: #8ac2bb; font-size: 36px; margin-top: 24px;"><span style="display:block">แล้วที่อื่น… มีอะไรซ่อนอยู่อีก?</span></p>
+      </div>
+
+      <div class="altitude-gauge">
+        <div class="hud-title">ASCENT TELEMETRY // MOSS CLIFF</div>
+        <div>TARGET: <span class="hud-val">SECRET GARDEN (F4-TOP)</span></div>
+        <div>VERTICAL ELEVATION: <span class="hud-val">+342.8 METERS</span></div>
+        <div>ASCENT METHOD: <span class="hud-val">10-MIN MOSS CLIMB</span></div>
+        <div style="margin-top: 14px; font-size: 16px; color: #8ac2bb;">REQUIRED STAMINA THRESHOLD:</div>
+        <div class="stamina-bar-container">
+          <div class="stamina-bar"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 15px; color: #d5a764;">
+          <span>CONSUMPTION: 92%</span>
+          <span>REACHABLE: YES</span>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>คำถามเริ่มต้นขึ้น</span>
+        <span>การปีนขึ้นสู่สวนต้องห้ามบนยอดวิหาร</span>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({paused: true});
+      tl.fromTo('.bg-video', {scale: 1.0, y: 0}, {scale: 1.06, y: -20, duration: 16, ease: 'none'}, 0);
+      tl.fromTo('.copy', {opacity: 0, x: -30}, {opacity: 1, x: 0, duration: 1.5, ease: 'power2.out'}, 0.5);
+      tl.fromTo('.rule', {scaleX: 0}, {scaleX: 1, duration: 1.2, ease: 'power2.out'}, 1.2);
+      tl.fromTo('.copy p', {opacity: 0, y: 15}, {opacity: 1, y: 0, duration: 1.2, stagger: 1.6, ease: 'power2.out'}, 1.8);
+      tl.fromTo('.altitude-gauge', {opacity: 0, x: 30}, {opacity: 1, x: 0, duration: 1.2, ease: 'power2.out'}, 1.5);
+      tl.to('#root', {opacity: 0, duration: 0.6, ease: 'power1.in'}, 15.4);
+      window.__timelines['garden'] = tl;
+    </script>
+  </template>
+</body>
+</html>

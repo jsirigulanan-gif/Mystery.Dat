@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <template>
+    <style>
+      @font-face { font-family: Thai; src: url('assets/thai.ttf'); }
+      @font-face { font-family: ThaiSerif; src: url('assets/serif-thai.ttf'); }
+      @font-face { font-family: Stone; src: url('assets/serif.ttf'); }
+      * { box-sizing: border-box; }
+      #root {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #121719;
+        color: #eee6d3;
+        font-family: Thai, sans-serif;
+      }
+      .bg-container {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .bg-video {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+        filter: contrast(1.08) brightness(0.62) sepia(0.25);
+      }
+      .overlay-grid {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 60% 50%, rgba(18,23,25,0.3) 0%, rgba(18,23,25,0.94) 85%);
+      }
+      .top-bar {
+        position: absolute;
+        top: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: #8ac2bb;
+      }
+      .copy {
+        position: absolute;
+        left: 118px;
+        top: 220px;
+        width: 880px;
+        z-index: 10;
+      }
+      .eyebrow {
+        font-size: 23px;
+        letter-spacing: 4px;
+        color: #b6a183;
+        margin-bottom: 20px;
+      }
+      .copy h1 {
+        font-family: ThaiSerif, serif;
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 1.35;
+        margin: 0 0 24px 0;
+        color: #eee6d3;
+      }
+      .rule {
+        height: 2px;
+        width: 140px;
+        background: #8ac2bb;
+        transform-origin: left center;
+        margin-bottom: 28px;
+      }
+      .copy p {
+        font-size: 32px;
+        line-height: 1.65;
+        margin: 14px 0;
+        color: #dcd2be;
+      }
+      .footer {
+        position: absolute;
+        bottom: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: #b6a183;
+        letter-spacing: 2px;
+      }
+      .stat-box {
+        position: absolute;
+        right: 118px;
+        top: 240px;
+        border-left: 2px solid #8ac2bb;
+        padding-left: 24px;
+        color: #eee6d3;
+      }
+      .stat-num {
+        font-family: Stone, serif;
+        font-size: 80px;
+        line-height: 1;
+        color: #8ac2bb;
+      }
+      .stat-label {
+        font-size: 20px;
+        letter-spacing: 3px;
+        color: rgb(197,181,157);
+        margin-top: 8px;
+      }
+    </style>
+    <div id="root" data-composition-id="scene2" data-width="1920" data-height="1080" data-duration="20">
+      <div class="bg-container">
+        <video id="video-bridge" class="bg-video clip" src="assets/footage/processed/02_wander_bridge_temple.mp4" muted playsinline data-start="0" data-duration="20" data-layout-allow-overflow=""></video>
+        <div class="overlay-grid"></div>
+      </div>
+      <div class="top-bar">
+        <span>ACT I : THE BARREN EDEN</span>
+        <span>PART 02 / 05</span>
+      </div>
+      <div class="copy">
+        <div class="eyebrow">THE FORBIDDEN LAND</div>
+        <h1>ความเงียบงัน<br>อันบาดลึก</h1>
+        <div class="rule"></div>
+        <p class="p1">โลกที่ไม่มีเมือง ไม่มีผู้คน และไม่มีเควสต์ย่อย</p>
+        <p class="p2">มีเพียงผืนแผ่นดินกว้างใหญ่ ม้าหนึ่งตัว</p>
+        <p class="p3" style="color:#8ac2bb; font-size:28px; margin-top:20px;">และความว่างเปล่าที่ชวนให้ตั้งคำถาม</p>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">16</div>
+        <div class="stat-label">STONE TITANS</div>
+      </div>
+      <div class="footer">
+        <span>ผืนดินต้องห้าม</span>
+        <span>สะพานศิลาสู่ศาลเจ้าแห่งการบูชา</span>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo('.bg-video', { scale: 1.05 }, { scale: 1.12, duration: 20, ease: 'none' }, 0);
+      tl.fromTo('.copy', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 1.5, ease: 'power2.out' }, 0.5);
+      tl.fromTo('.stat-box', { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 1.5, ease: 'power2.out' }, 1.2);
+      tl.fromTo('.rule', { scaleX: 0 }, { scaleX: 1, duration: 1.2, ease: 'power2.out' }, 1.8);
+      tl.fromTo('.p1', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 2.6);
+      tl.fromTo('.p2', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 5.5);
+      tl.fromTo('.p3', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 8.5);
+      tl.to('#root', { opacity: 0, duration: 0.8, ease: 'power1.in' }, 19.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['scene2'] = tl;
+    </script>
+  </template>
+</body>
+</html>

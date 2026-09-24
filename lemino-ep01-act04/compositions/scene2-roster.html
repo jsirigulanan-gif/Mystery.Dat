@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <template>
+    <style>
+      @font-face { font-family: Thai; src: url('assets/thai.ttf'); }
+      @font-face { font-family: ThaiSerif; src: url('assets/serif-thai.ttf'); }
+      @font-face { font-family: Stone; src: url('assets/serif.ttf'); }
+      * { box-sizing: border-box; }
+      #root {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #121719;
+        color: #eee6d3;
+        font-family: Thai, sans-serif;
+      }
+      .bg-container {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .bg-video {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+        filter: contrast(1.06) brightness(0.60) sepia(0.18);
+      }
+      .overlay-grid {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 75% 50%, rgba(18,23,25,0.40) 0%, rgba(18,23,25,0.92) 85%);
+      }
+      .top-bar {
+        position: absolute;
+        top: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: #8ac2bb;
+      }
+      .badge {
+        display: inline-block;
+        border: 1px solid #8ac2bb;
+        padding: 4px 12px;
+        font-size: 18px;
+        color: #8ac2bb;
+        margin-left: 16px;
+        border-radius: 2px;
+      }
+      .copy {
+        position: absolute;
+        left: 118px;
+        top: 200px;
+        width: 860px;
+        z-index: 10;
+      }
+      .eyebrow {
+        font-size: 22px;
+        letter-spacing: 4px;
+        color: #b6a183;
+        margin-bottom: 18px;
+      }
+      .copy h1 {
+        font-family: ThaiSerif, serif;
+        font-size: 70px;
+        font-weight: 400;
+        line-height: 1.35;
+        margin: 0 0 20px 0;
+        color: #eee6d3;
+      }
+      .rule {
+        height: 2px;
+        width: 140px;
+        background: #8ac2bb;
+        transform-origin: left center;
+        margin-bottom: 24px;
+      }
+      .copy p {
+        font-size: 30px;
+        line-height: 1.65;
+        margin: 12px 0;
+        color: #dcd2be;
+      }
+      .roster-card {
+        position: absolute;
+        right: 118px;
+        top: 210px;
+        width: 660px;
+        background: rgba(18, 23, 25, 0.90);
+        border: 1px solid rgba(138, 194, 187, 0.35);
+        border-radius: 4px;
+        padding: 24px;
+        z-index: 10;
+        box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+      }
+      .roster-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        color: #8ac2bb;
+        border-bottom: 1px solid rgba(138, 194, 187, 0.25);
+        padding-bottom: 10px;
+        margin-bottom: 14px;
+        letter-spacing: 1.5px;
+      }
+      .roster-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 18px;
+        font-family: monospace;
+        font-size: 18px;
+      }
+      .roster-item {
+        color: #dcd2be;
+      }
+      .roster-item span {
+        color: #d5a764;
+        font-weight: bold;
+      }
+      .footer {
+        position: absolute;
+        bottom: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: #b6a183;
+        letter-spacing: 2px;
+      }
+    </style>
+    <div id="root" data-composition-id="scene2" data-width="1920" data-height="1080" data-duration="25">
+      <div class="bg-container">
+        <video id="video-roster" class="bg-video clip" src="assets/footage/processed/02_the_8_lost_titans.mp4" muted playsinline data-start="0" data-duration="25" data-layout-allow-overflow=""></video>
+        <div class="overlay-grid"></div>
+      </div>
+      <div class="top-bar">
+        <span>ACT IV : THE AUTOPSY OF TEAM ICO</span>
+        <span>PART 02 / 05 <span class="badge">CLASSIFIED ROSTER</span></span>
+      </div>
+      <div class="copy">
+        <div class="eyebrow">เอกสารลับจาก OFFICIAL ARTBOOK</div>
+        <h1>บัญชียักษ์ที่สาบสูญ<br>8 อสูรที่ถูกลบ</h1>
+        <div class="rule"></div>
+        <p class="p1">ในที่สุด ความลับของยักษ์ทั้ง 8 ตนที่ถูกลบก็กระจ่างแจ้ง</p>
+        <p class="p2">พวกมันไม่ใช่แค่จินตนาการ แต่มีชื่อ สายพันธุ์ และภาพร่างอย่างเป็นทางการ</p>
+        <p class="p3" style="color:#8ac2bb; font-size:26px; margin-top:16px;">เศษซากของพวกมันถูกกระจัดกระจายอยู่ในแผ่นเกมทุกเวอร์ชัน</p>
+      </div>
+      <div class="roster-card">
+        <div class="roster-header">
+          <span>THE 8 UNUSED COLOSSI MATRIX</span>
+          <span>REVISION: 1.0</span>
+        </div>
+        <div class="roster-grid">
+          <div class="roster-item">01. <span>SIRIUS</span> (หมูป่า)</div>
+          <div class="roster-item">02. <span>PHOLUX</span> (ปีศาจ)</div>
+          <div class="roster-item">03. <span>YAMORI</span> (ตุ๊กแก)</div>
+          <div class="roster-item">04. <span>KYOS</span> (นกยักษ์)</div>
+          <div class="roster-item">05. <span>SARU</span> (ลิงยักษ์)</div>
+          <div class="roster-item">06. <span>SPIDER</span> (แมงมุม)</div>
+          <div class="roster-item">07. <span>WORM</span> (หนอนทราย)</div>
+          <div class="roster-item">08. <span>PHOENIX</span> (นกไฟ)</div>
+        </div>
+        <div style="border-top:1px solid rgba(138,194,187,0.25); margin-top:14px; padding-top:10px; color:#8ac2bb; font-family:monospace; font-size:16px;">
+          &gt; TOTAL IDENTIFIED CUT TITANS: 8 SPECIES
+        </div>
+      </div>
+      <div class="footer">
+        <span>สารบัญวัตถุพยาน: การกู้คืนรายชื่อยักษ์ที่ถูกตัดทิ้ง</span>
+        <span>WANDA TO KYOZO OFFICIAL GUIDE</span>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo('.bg-video', { scale: 1.05 }, { scale: 1.12, duration: 25, ease: 'none' }, 0);
+      tl.fromTo('.copy', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 1.5, ease: 'power2.out' }, 0.5);
+      tl.fromTo('.rule', { scaleX: 0 }, { scaleX: 1, duration: 1.2, ease: 'power2.out' }, 1.8);
+      tl.fromTo('.p1', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 2.5);
+      tl.fromTo('.p2', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 6.5);
+      tl.fromTo('.p3', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 10.5);
+      tl.fromTo('.roster-card', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1.5, ease: 'power2.out' }, 4.0);
+      tl.to('#root', { opacity: 0, duration: 0.8, ease: 'power1.in' }, 24.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['scene2'] = tl;
+    </script>
+  </template>
+</body>
+</html>

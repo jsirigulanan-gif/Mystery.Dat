@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <template>
+    <style>
+      @font-face { font-family: Thai; src: url('assets/thai.ttf'); }
+      @font-face { font-family: ThaiSerif; src: url('assets/serif-thai.ttf'); }
+      @font-face { font-family: Stone; src: url('assets/serif.ttf'); }
+      * { box-sizing: border-box; }
+      #root {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #121719;
+        color: #eee6d3;
+        font-family: Thai, sans-serif;
+      }
+      .bg-container {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .bg-video {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+        filter: contrast(1.06) brightness(0.60) sepia(0.18);
+      }
+      .overlay-grid {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 75% 50%, rgba(18,23,25,0.40) 0%, rgba(18,23,25,0.92) 85%);
+      }
+      .top-bar {
+        position: absolute;
+        top: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: #8ac2bb;
+      }
+      .badge {
+        display: inline-block;
+        border: 1px solid #8ac2bb;
+        padding: 4px 12px;
+        font-size: 18px;
+        color: #8ac2bb;
+        margin-left: 16px;
+        border-radius: 2px;
+      }
+      .copy {
+        position: absolute;
+        left: 118px;
+        top: 200px;
+        width: 860px;
+        z-index: 10;
+      }
+      .eyebrow {
+        font-size: 22px;
+        letter-spacing: 4px;
+        color: #b6a183;
+        margin-bottom: 18px;
+      }
+      .copy h1 {
+        font-family: ThaiSerif, serif;
+        font-size: 70px;
+        font-weight: 400;
+        line-height: 1.35;
+        margin: 0 0 20px 0;
+        color: #eee6d3;
+      }
+      .rule {
+        height: 2px;
+        width: 140px;
+        background: #8ac2bb;
+        transform-origin: left center;
+        margin-bottom: 24px;
+      }
+      .copy p {
+        font-size: 30px;
+        line-height: 1.65;
+        margin: 12px 0;
+        color: #dcd2be;
+      }
+      .hex-card {
+        position: absolute;
+        right: 118px;
+        top: 210px;
+        width: 660px;
+        background: rgba(18, 23, 25, 0.90);
+        border: 1px solid rgba(138, 194, 187, 0.35);
+        border-radius: 4px;
+        padding: 26px;
+        z-index: 10;
+        box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+      }
+      .hex-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        color: #8ac2bb;
+        border-bottom: 1px solid rgba(138, 194, 187, 0.25);
+        padding-bottom: 12px;
+        margin-bottom: 16px;
+        letter-spacing: 1.5px;
+      }
+      .hex-body {
+        font-family: monospace;
+        font-size: 19px;
+        line-height: 1.75;
+        color: #e2d7c3;
+      }
+      .hex-offset {
+        color: #8ac2bb;
+      }
+      .hex-data {
+        color: #dcd2be;
+        margin: 0 10px;
+      }
+      .hex-ascii {
+        color: #d5a764;
+      }
+      .footer {
+        position: absolute;
+        bottom: 65px;
+        left: 118px;
+        right: 118px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: #b6a183;
+        letter-spacing: 2px;
+      }
+    </style>
+    <div id="root" data-composition-id="scene5" data-width="1920" data-height="1080" data-duration="25">
+      <div class="bg-container">
+        <video id="video-bones" class="bg-video clip" src="assets/footage/processed/05_dvd_digital_bones.mp4" muted playsinline data-start="0" data-duration="25" data-layout-allow-overflow=""></video>
+        <div class="overlay-grid"></div>
+      </div>
+      <div class="top-bar">
+        <span>ACT II : THE LEGEND OF THE 17TH</span>
+        <span>PART 05 / 05 <span class="badge">DVD SECTOR DUMP</span></span>
+      </div>
+      <div class="copy">
+        <div class="eyebrow">โครงสร้างข้อมูลแผ่น DVD 4.7 GB (SLUS-21184)</div>
+        <h1>วิญญาณในรหัสข้อมูล<br>กระดูกดิจิทัล</h1>
+        <div class="rule"></div>
+        <p class="p1">แม้ตัวตนของพวกมันจะถูกลบออกจากโลกของการเล่นจริง</p>
+        <p class="p2">แต่ "กระดูกและเส้นเอ็น" ยังคงหลับใหลอยู่ในไฟล์ NICO.DAT</p>
+        <p class="p3" style="color:#8ac2bb; font-size:26px; margin-top:16px;">มันไม่ใช่แค่ตำนาน... แต่คือชิ้นส่วนที่รอคอยการค้นพบ</p>
+      </div>
+      <div class="hex-card">
+        <div class="hex-header">
+          <span>BINARY MEMORY INSPECTION</span>
+          <span>0x004F8200</span>
+        </div>
+        <div class="hex-body">
+          <div><span class="hex-offset">004F8200:</span><span class="hex-data">4E 49 43 4F 5F 44 41 54</span><span class="hex-ascii">NICO_DAT</span></div>
+          <div><span class="hex-offset">004F8210:</span><span class="hex-data">53 49 52 49 55 53 5F 4D</span><span class="hex-ascii">SIRIUS_M</span></div>
+          <div><span class="hex-offset">004F8220:</span><span class="hex-data">53 41 52 55 5F 41 4E 4D</span><span class="hex-ascii">SARU_ANM</span></div>
+          <div><span class="hex-offset">004F8230:</span><span class="hex-data">50 48 4F 4C 55 58 5F 48</span><span class="hex-ascii">PHOLUX_H</span></div>
+          <div style="border-top:1px solid rgba(138,194,187,0.25); margin-top:14px; padding-top:10px; color:#8ac2bb; font-size:17px;">
+            SECTORS ANALYZED: 2,284,160 / UNLINKED NODES: 1,428
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <span>สรุปบทสืบสวน: จุดเริ่มต้นของเหล่านักล่าความลับ</span>
+        <span>THE COMMUNITY AWAKENS</span>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo('.bg-video', { scale: 1.05 }, { scale: 1.12, duration: 25, ease: 'none' }, 0);
+      tl.fromTo('.copy', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 1.5, ease: 'power2.out' }, 0.5);
+      tl.fromTo('.rule', { scaleX: 0 }, { scaleX: 1, duration: 1.2, ease: 'power2.out' }, 1.8);
+      tl.fromTo('.p1', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 2.5);
+      tl.fromTo('.p2', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 6.5);
+      tl.fromTo('.p3', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 10.5);
+      tl.fromTo('.hex-card', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1.5, ease: 'power2.out' }, 3.5);
+      tl.to('#root', { opacity: 0, duration: 0.8, ease: 'power1.in' }, 24.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines['scene5'] = tl;
+    </script>
+  </template>
+</body>
+</html>
