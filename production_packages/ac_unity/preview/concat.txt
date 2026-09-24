@@ -1,0 +1,3 @@
+file '/home/keng/พื้นโต๊ะ/อิพี 1/production_packages/ac_unity/preview/shot_003.mp4'
+file '/home/keng/พื้นโต๊ะ/อิพี 1/production_packages/ac_unity/preview/shot_004.mp4'
+file '/home/keng/พื้นโต๊ะ/อิพี 1/production_packages/ac_unity/preview/shot_007.mp4'
