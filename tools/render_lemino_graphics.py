@@ -497,6 +497,62 @@ def render_archival_free_game_frame(progress=1.0):
     return im.convert("RGB")
 
 # ==============================================================================
+# 6.5 ARCHIVAL EVIDENCE: COMMUNITY REACTION FORUM DOSSIER (SHOT-103)
+# ==============================================================================
+def render_community_sentiment_frame(progress=1.0):
+    """Render community forum reaction cards for free game compensation."""
+    im = Image.new("RGBA", (1920, 1080), BG_COLOR)
+    draw = ImageDraw.Draw(im, "RGBA")
+    draw_grid_background(draw, cell_size=80, alpha=25)
+    
+    draw_top_bar(draw, act_num="ACT IV", edl_tc="08:54:00:00", shot_id="SHOT-103")
+    draw_footer_bar(draw, "COMMUNITY REACTION FORENSICS // GAMER SENTIMENT SHIFT & FORUM ARCHIVES")
+    
+    gx1, gy1, gx2, gy2 = 200, 140, 1920 - 200, 930
+    draw.rectangle([(gx1, gy1), (gx2, gy2)], fill=PANEL_BG, outline=TEAL, width=1)
+    draw_corner_brackets(draw, gx1, gy1, gx2, gy2, arm=30, color=GOLD, width=2)
+    
+    f_head = get_font(FONT_SERIF, 32)
+    f_sub = get_font(FONT_SERIF, 22)
+    f_forum = get_font(FONT_SERIF, 20)
+    
+    draw.text((gx1 + 50, gy1 + 35), "PUBLIC RELATIONS RECEPTIVITY // GLOBAL FORUM REACTION", font=f_head, fill=GOLD)
+    draw.text((gx1 + 50, gy1 + 75), "ANALYSIS OF REDDIT, NEOGAF & TWITTER THREADS POST-APOLOGY", font=f_sub, fill=TEAL)
+    
+    # 3 Forum Post Cards
+    posts = [
+        ("REDDIT // r/games (Nov 27, 2014)", 
+         "“Ubisoft actually apologized and gave away Far Cry 4 for free... That is a $60 game. Honestly did not expect them to do this.”",
+         "+4,821 UPVOTES  •  94% POSITIVE"),
+        ("NEOGAF FORUMS // THREAD #8192", 
+         "“The PR disaster was so severe they had to sacrifice AAA revenue to stop a class-action lawsuit. But hey, free Watch Dogs.”",
+         "VERIFIED MEMBER  •  NOVEMBER 2014"),
+        ("IGN COMMUNITY FEEDBACK", 
+         "“Unity still drops frames in Notre-Dame, but giving free games to Season Pass holders quelled the immediate boycott.”",
+         "TOP RATED COMMENT  •  382 LIKES")
+    ]
+    
+    card_y = gy1 + 140
+    card_h = 190
+    card_w = gx2 - gx1 - 100
+    
+    for i, (source_tag, body_text, meta_tag) in enumerate(posts):
+        cy = card_y + i * (card_h + 35)
+        # Staggered slide in
+        prog_i = max(0.0, min(1.0, (progress - i * 0.15) * 1.5))
+        ox = int((1.0 - prog_i) * 60)
+        
+        draw.rectangle([(gx1 + 50 + ox, cy), (gx1 + 50 + ox + card_w, cy + card_h)], fill=(16, 22, 26, 230), outline=(138, 194, 187, 120), width=1)
+        draw.rectangle([(gx1 + 50 + ox, cy), (gx1 + 50 + ox + 6, cy + card_h)], fill=GOLD)
+        
+        draw.text((gx1 + 80 + ox, cy + 20), source_tag, font=f_forum, fill=TEAL)
+        draw.text((gx1 + 80 + ox, cy + 60), body_text, font=f_sub, fill=WHITE)
+        draw.text((gx1 + 80 + ox, cy + 145), meta_tag, font=f_forum, fill=MUTED_GRAY)
+        
+    return im.convert("RGB")
+
+
+# ==============================================================================
 # 7. DATA VISUALIZATION: UK SALES SLUMP (-40%)
 # ==============================================================================
 def render_sales_comparison_frame(progress=1.0):
@@ -764,6 +820,9 @@ def generate_shot_graphic_clip(shot, out_path):
         
     if sid in ["SHOT-092", "SHOT-093", "SHOT-094"]:
         return render_clip_to_mp4(render_archival_free_game_frame, dur, out_path)
+        
+    if sid in ["SHOT-103"]:
+        return render_clip_to_mp4(render_community_sentiment_frame, dur, out_path)
         
     if sid in ["SHOT-120", "SHOT-121"]:
         return render_clip_to_mp4(render_sales_comparison_frame, dur, out_path)
