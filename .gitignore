@@ -9,6 +9,8 @@ master_episode/
 
 # Large raw footage
 **/assets/footage/
+**/broll_pool/
+**/assets/audio/
 **/raw/
 **/processed/
 
