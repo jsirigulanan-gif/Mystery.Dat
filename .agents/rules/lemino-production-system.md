@@ -18,13 +18,14 @@ All scenes use a modular color theme system defined in `templates/lemino-episode
   - Secondary Accent: `#d5a764` (Warm Desert Gold / Amber)
   - Primary Typography: `#ffffff` / `#eee6d3` (Stone Off-White)
   - HUD Panel Background: `rgba(18, 23, 25, 0.85)` with `1px solid rgba(138, 194, 187, 0.35)`
-- **Visual Layers (Strict Order from back to front):**
-  1. `<video class="bg-video">` (Cinematic footage, filtered with contrast, slight desaturation, sepia tint)
-  2. `.overlay-grid` (Radial vignette `radial-gradient(circle, rgba(18,23,25,0.4) 0%, rgba(18,23,25,0.92) 85%)`)
-  3. `.scanlines` (Subtle 4px video scanlines at 0.35 opacity)
-  4. `.top-bar` & `.footer` (Archival classification tags, episode beats, timecodes)
-  5. `.copy` (Headline, accent rule line, body paragraphs with ThaiSerif/Thai fonts)
-  6. `.hud-telemetry` (Floating forensic HUD telemetry box, coordinates, status indicators)
+- **Visual Layers & Minimalism (Strict Context-Driven Rule):**
+  - **Zero Visual Clutter:** NEVER force all UI layers onto every shot. Elements must appear ONLY when explicitly specified by the Storyboard / Shot Prompt.
+  - **Shot-Specific Layer Composition:**
+    1. `Cinematic Establishing (Shot 1)`: Clean, immersive footage/3D. NO HUD boxes, NO scanlines. Only optional subtle lower-third location tag.
+    2. `Archival / Evidence (Shot 2)`: Pristine historical documents or photos with slow push-in. NO scanlines obscuring text. Red marker or date stamp only.
+    3. `3D Diagram / Explainer (Shot 6 - Blender)`: Clean dark blueprint canvas with technical vector callouts. Zero generic HUD cards covering the 3D model.
+    4. `Typography / Quote (Shot 9)`: Stark, high-contrast typography on black/dark gradient. Zero UI clutter.
+    5. `Forensic HUD / Telemetry Box`: Rendered ONLY when specific forensic data, coordinates, or system metrics are explicitly required.
 
 ## 3. Strict Quality Standards
 - **100% WCAG AA Contrast Compliance:** Every text element must exceed 4.5:1 (normal text) and 3.0:1 (large text/headers). Always use drop-shadows or dark translucent backplates.
