@@ -253,7 +253,7 @@ def main():
         "[2:a]volume=0.10,equalizer=f=1200:width_type=o:w=2:g=-6,aformat=channel_layouts=stereo[bgm_eq];"
         "[bgm_eq][vo2]sidechaincompress=threshold=0.03:ratio=8:attack=20:release=350[ducked_bgm];"
         "[3:a]volume=0.5,aformat=channel_layouts=stereo[sfx_imp];"
-        "[vo1][ducked_bgm][sfx_imp]amix=inputs=3:duration=first:weights=1.0 0.8 0.4[aout]"
+        "[vo1][ducked_bgm][sfx_imp]amix=inputs=3:duration=first:weights=1.0 0.8 0.4,loudnorm=I=-14:LRA=7:TP=-1.0[aout]"
     )
 
     cmd = [
@@ -265,10 +265,10 @@ def main():
         "-filter_complex", filter_complex,
         "-map", "0:v",
         "-map", "[aout]",
+        "-t", "900.00",
         "-c:v", "copy",
         "-c:a", "aac",
         "-b:a", "256k",
-        "-shortest",
         final_output
     ]
     subprocess.run(cmd, check=True)

@@ -591,13 +591,13 @@ def render_typography_frame(quote_text, attribution="ASSASSIN'S CREED: UNITY // 
 # ==============================================================================
 # 9. GRAPHIC B-ROLL: ANVILNEXT 2.0 3D PARIS BLUEPRINT
 # ==============================================================================
-def render_graphic_broll_blueprint(progress=1.0):
+def render_graphic_broll_blueprint(progress=1.0, shot_id="SHOT-013", act_lbl="ACT I", edl_tc="01:01:00:00"):
     """Render 3D Paris Wireframe & AnvilNext 2.0 Architectural Blueprint."""
     im = Image.new("RGBA", (1920, 1080), (10, 14, 17))
     draw = ImageDraw.Draw(im, "RGBA")
     draw_grid_background(draw, cell_size=60, alpha=35)
     
-    draw_top_bar(draw, act_num="ACT I", edl_tc="01:01:00:00", shot_id="SHOT-013")
+    draw_top_bar(draw, act_num=act_lbl, edl_tc=edl_tc, shot_id=shot_id)
     draw_footer_bar(draw, "ANVILNEXT 2.0 BLUEPRINT // PARIS 1:1 METRIC RECONSTRUCTION & 25% SEAMLESS INTERIORS")
     
     cx = 1920 // 2
@@ -649,13 +649,13 @@ def render_graphic_broll_blueprint(progress=1.0):
 # ==============================================================================
 # 10. ARCHIVAL EVIDENCE: 1789 BASTILLE COPPERPLATE ENGRAVING
 # ==============================================================================
-def render_bastille_frame(progress=1.0):
+def render_bastille_frame(progress=1.0, shot_id="SHOT-006", act_lbl="ACT I", edl_tc="00:24:50:00"):
     """Render 1789 Bastille Engraving with 2.5D push-in and red forensic highlight."""
     im = Image.new("RGBA", (1920, 1080), (14, 12, 10))
     draw = ImageDraw.Draw(im, "RGBA")
     draw_grid_background(draw, cell_size=100, alpha=15)
     
-    draw_top_bar(draw, act_num="ACT I", edl_tc="00:24:50:00", shot_id="SHOT-006")
+    draw_top_bar(draw, act_num=act_lbl, edl_tc=edl_tc, shot_id=shot_id)
     draw_footer_bar(draw, "HISTORICAL ARCHIVES // STORMING OF THE BASTILLE — 14 JULY 1789 (COPPERPLATE ENGRAVING)")
     
     # Outer frame
@@ -731,7 +731,7 @@ def render_clip_to_mp4(frame_func, duration_sec, out_mp4, fps=30):
 def generate_shot_graphic_clip(shot, out_path):
     """
     Selects the exact appropriate broadcast motion graphic composition
-    and renders it to 1080p MP4.
+    with deterministic Shot ID binding and renders it to 1080p MP4.
     """
     sid = shot["id"].upper()
     dur = shot["duration"]
@@ -739,39 +739,61 @@ def generate_shot_graphic_clip(shot, out_path):
     gfx = shot["graphics"]
     vis = shot["visual"]
     
-    # 1. Grand Title Sequence
-    if sid in ["SHOT-001", "SHOT-002", "SHOT-003"] and "Title" in (gfx + vis):
+    # 1. Deterministic Explicit Shot ID Mapping
+    s_tc = shot.get("start_tc", "00:00:00:00")
+    if sid in ["SHOT-001", "SHOT-002", "SHOT-003"]:
         return render_clip_to_mp4(render_grand_title_frame, dur, out_path)
         
-    # 2. Digital Foundry FPS Drop
+    if sid in ["SHOT-006"]:
+        return render_clip_to_mp4(lambda p: render_bastille_frame(p, shot_id=sid, edl_tc=s_tc), dur, out_path)
+        
+    if sid in ["SHOT-012", "SHOT-013"]:
+        return render_clip_to_mp4(lambda p: render_graphic_broll_blueprint(p, shot_id=sid, edl_tc=s_tc), dur, out_path)
+        
+    if sid in ["SHOT-043", "SHOT-044", "SHOT-045"]:
+        return render_clip_to_mp4(render_digital_foundry_frame, dur, out_path)
+        
+    if sid in ["SHOT-064", "SHOT-065"]:
+        return render_clip_to_mp4(render_cpu_architecture_frame, dur, out_path)
+        
+    if sid in ["SHOT-074", "SHOT-075"]:
+        return render_clip_to_mp4(render_cpu_architecture_frame, dur, out_path)
+        
+    if sid in ["SHOT-087", "SHOT-088"]:
+        return render_clip_to_mp4(render_archival_apology_frame, dur, out_path)
+        
+    if sid in ["SHOT-092", "SHOT-093", "SHOT-094"]:
+        return render_clip_to_mp4(render_archival_free_game_frame, dur, out_path)
+        
+    if sid in ["SHOT-120", "SHOT-121"]:
+        return render_clip_to_mp4(render_sales_comparison_frame, dur, out_path)
+        
+    if sid in ["SHOT-145", "SHOT-146"]:
+        return render_clip_to_mp4(render_grand_title_frame, dur, out_path)
+
+    # 2. Content & Keyword Fallback Rules
     if any(k in (gfx + vis + stype).lower() for k in ["digital foundry", "15.2 fps", "15 fps", "frame-rate", "framerate", "fps drop"]):
         return render_clip_to_mp4(render_digital_foundry_frame, dur, out_path)
         
-    # 3. CPU 8-Core Jaguar Architecture
     if any(k in (gfx + vis + stype).lower() for k in ["jaguar", "8-core", "cpu", "microprocessor", "thread saturation"]):
         return render_clip_to_mp4(render_cpu_architecture_frame, dur, out_path)
         
-    # 4. Yannis Mallat Apology Letter
     if any(k in (gfx + vis + stype).lower() for k in ["apology", "yannis mallat", "open letter", "diminished by bugs"]):
         return render_clip_to_mp4(render_archival_apology_frame, dur, out_path)
         
-    # 5. Free AAA Game Waiver
     if any(k in (gfx + vis + stype).lower() for k in ["free game", "waiver", "class action", "concessions", "far cry 4"]):
         return render_clip_to_mp4(render_archival_free_game_frame, dur, out_path)
         
-    # 6. Sales Slump Bar Chart
     if any(k in (gfx + vis + stype).lower() for k in ["sales", "syndicate", "slump", "-40%", "market", "collapse"]):
         return render_clip_to_mp4(render_sales_comparison_frame, dur, out_path)
         
-    # 7. Bastille Engraving
     if any(k in (gfx + vis).lower() for k in ["bastille", "14 july 1789", "engraving"]):
         return render_clip_to_mp4(render_bastille_frame, dur, out_path)
         
-    # 8. AnvilNext 2.0 Paris Blueprint
     if any(k in (gfx + vis + stype).lower() for k in ["blueprint", "anvilnext", "interior ratio", "1:1 scale", "photogrammetry"]):
         return render_clip_to_mp4(render_graphic_broll_blueprint, dur, out_path)
         
-    # 9. Chapter Card
+    # 3. Chapter Card
     if "Transition" in stype or "Chapter" in stype or "ACT " in gfx.upper():
         act_lbl = "ACT // " + sid
         if "ACT I" in gfx.upper(): act_lbl = "ACT I"
@@ -785,7 +807,7 @@ def generate_shot_graphic_clip(shot, out_path):
         act_sub = vis[:60] if vis else "PARIS 1789 — 2019"
         return render_clip_to_mp4(lambda p: render_chapter_frame(act_lbl, act_title, act_sub, p), dur, out_path)
         
-    # 10. Typography Quote Card
+    # 4. Typography Quote Card
     if "Typography" in stype or "Quote" in stype or (gfx.startswith("“") or gfx.startswith('"')):
         clean_quote = gfx.replace('“', '"').replace('”', '"')
         if not clean_quote:

@@ -1,0 +1,688 @@
+1
+00:00:00,000 --> 00:00:05,000
+If you have ever stood amidst the weight of history...
+
+2
+00:00:05,000 --> 00:00:10,000
+You would know that monumental greatness and catastrophic collapse...
+
+3
+00:00:10,000 --> 00:00:14,500
+Often originate from the very same source...
+
+4
+00:00:14,500 --> 00:00:19,500
+And that is... 'unbridled ambition.'
+
+5
+00:00:19,500 --> 00:00:24,500
+In the summer of 2014, the entire gaming industry held its breath.
+
+6
+00:00:24,500 --> 00:00:30,000
+Ubisoft announced a technological marvel set during the French Revolution.
+
+7
+00:00:30,000 --> 00:00:35,000
+Paris 1789. Reconstructed not as an impression, but at a true 1:1 metric scale.
+
+8
+00:00:35,000 --> 00:00:40,000
+Ten studios across the globe. Thousands of developers. An unprecedented budget.
+
+9
+00:00:40,000 --> 00:00:45,000
+This was meant to be the benchmark of eighth-generation gaming.
+
+10
+00:00:45,000 --> 00:00:50,500
+The flagship showcase of the PlayStation 4 and Xbox One.
+
+11
+00:00:50,500 --> 00:00:56,000
+Yet, on November 11, 2014... players stepped into a very different reality.
+
+12
+00:00:56,000 --> 00:01:01,000
+A Paris that was astonishingly detailed...
+
+13
+00:01:01,000 --> 00:01:07,000
+Yet crumbling beneath the weight of its own code.
+
+14
+00:01:07,000 --> 00:01:12,500
+Floating eyeballs. Missing faces. Hollow skull sockets hovering in the dark.
+
+15
+00:01:12,500 --> 00:01:17,500
+It became the defining meme of a gaming generation.
+
+16
+00:01:17,500 --> 00:01:23,500
+Within days, Ubisoft's market capitalization lost over 9% in value.
+
+17
+00:01:23,500 --> 00:01:29,000
+The stock plummeted. The global press mocked them relentlessly.
+
+18
+00:01:29,000 --> 00:01:34,500
+And a decade-long annual release model faced its sudden demise.
+
+19
+00:01:34,500 --> 00:01:40,000
+How did one of the most ambitious technological projects in video game history...
+
+20
+00:01:40,000 --> 00:01:45,500
+Turn into the most infamous launch disaster of the modern era?
+
+21
+00:01:45,500 --> 00:01:51,000
+This is the investigation into Assassin's Creed: Unity.
+
+22
+00:01:51,000 --> 00:01:57,000
+[3D CAD RECONSTRUCTION // NOTRE-DAME MESH] Screen recording of 3D modeling software: Caroline placing individual ...
+
+23
+00:01:57,000 --> 00:02:02,500
+[ROSE WINDOW // 14TH CENTURY REPLICA] Close-up in-game macro view of intricate rose stained-glass window ins...
+
+24
+00:02:02,500 --> 00:02:08,000
+[NOTRE-DAME DE PARIS // 1789 RESTORATION] Stunning exterior shot of Notre-Dame Cathedral standing tall over Pari...
+
+25
+00:02:08,000 --> 00:02:13,500
+[TIMELINE // JUNE 2014 -> NOVEMBER 2014] Glowing cyan timeline cursor sliding from June 2014, accelerating towa...
+
+26
+00:02:13,500 --> 00:02:19,000
+[UBISOFT MONTREAL // CRUNCH PERIOD AUTUMN 2014] Exterior photo of Ubisoft Montreal brick office building glowing with ...
+
+27
+00:02:19,000 --> 00:02:24,500
+[STRUCTURAL TENSION MAXIMUM] A delicate, crystalline glass statue of Notre-Dame Cathedral developin...
+
+28
+00:02:24,500 --> 00:02:30,000
+[NOVEMBER 11, 2014 // ZERO HOUR] Deep pitch-black void, sudden harsh crimson digital stamping: '11.11.2...
+
+29
+00:02:30,000 --> 00:02:35,000
+[11 NOVEMBER 2014 // WORLDWIDE LAUNCH] Digital LED calendar flipping violently in darkness, stopping on 'TUES...
+
+30
+00:02:35,000 --> 00:02:40,500
+[MIDNIGHT LAUNCH QUEUE // NOVEMBER 2014] Midnight launch queue outside retail store in 2014, fans holding boxed...
+
+31
+00:02:40,500 --> 00:02:45,500
+[PS4 HARDWARE BOOT // DISC READ INITIALIZATION] Close-up of player sliding Assassin's Creed Unity Blu-ray disc into PS...
+
+32
+00:02:45,500 --> 00:02:51,000
+[ANVILNEXT RENDERING FAULT // RAW CAPTURE] Archival gameplay capture: Cutscene begins, character turns around to ...
+
+33
+00:02:51,000 --> 00:02:56,000
+[THE 'NO-FACE' GLITCH // TEXTURE MISSING] Macro close-up on the infamous glitch: Two moist human eyeballs swivel...
+
+34
+00:02:56,000 --> 00:03:01,000
+[VRAM STREAMING QUEUE // LATENCY OVERFLOW] 3D anatomical head wireframe rotating, glowing red error tags pointing...
+
+35
+00:03:01,000 --> 00:03:06,500
+[PHYSICS COLLISION COLLAPSE // SUB-TERRAIN MESH] Gameplay: Arno climbing wall, suddenly falling through solid stone int...
+
+36
+00:03:06,500 --> 00:03:11,500
+[WORLD ENTITY DESYNC // T-POSE SPAWN ERRORS] Montage cut: Parisian citizens hovering 10 feet in the air in rigid T-...
+
+37
+00:03:11,500 --> 00:03:17,000
+[MEDIA QUOTE // KOTAKU HEADLINE] Curved vintage CRT monitor displaying terminal text: 'THE GREATEST HOR...
+
+38
+00:03:17,000 --> 00:03:22,000
+[ACT II // THE VIRAL WILDFIRE] Violent digital RGB chromatic aberration split wiping screen horizonta...
+
+39
+00:03:22,000 --> 00:03:27,000
+[REDDIT R/GAMING // 12 NOVEMBER 2014] Montage of Reddit r/gaming threads with thousands of upvotes, titles r...
+
+40
+00:03:27,000 --> 00:03:32,000
+[TWITTER TRENDS // #ACUNITYGLITCH #NOFACE] Twitter feed screenshot showing '#ACUnityGlitch' trending worldwide al...
+
+41
+00:03:32,000 --> 00:03:37,000
+[CONAN O'BRIEN // CLUELESS GAMER (TBS)] Conan O'Brien on Clueless Gamer segment staring in disbelief at the gl...
+
+42
+00:03:37,000 --> 00:03:42,000
+[CRITICAL CONSENSUS // BROKEN ON ARRIVAL] Gaming review scores flashing on screen: IGN 7.8, Polygon 6.5, GameSpo...
+
+43
+00:03:42,000 --> 00:03:47,000
+[MICROTRANSACTION STORE // $60 BASE GAME] In-game HUD close-up: Microtransaction store menu showing 'Hack Equipm...
+
+44
+00:03:47,000 --> 00:03:52,000
+[COMPANION APP REQUIREMENT // MOBILE SYNC ERROR] Gameplay: Arno standing in front of locked golden chest in Paris alley...
+
+45
+00:03:52,000 --> 00:03:57,000
+[CONSUMER BACKLASH // COMMUNITY OUTRAGE] Angry YouTube creators ranting to camera with gameplay clips playing i...
+
+46
+00:03:57,000 --> 00:04:02,000
+[THE COST OF PREMATURE RELEASE] Dark charcoal background, red sans-serif text: 'A REPUTATION BUILT OVE...
+
+47
+00:04:02,000 --> 00:04:07,000
+[BRAND INTEGRITY CRISIS] A sleek silver Ubisoft swirl logo standing on pedestal, edges catching...
+
+48
+00:04:07,000 --> 00:04:12,000
+[SECTION 2.3 // HARDWARE METRICS] Green digital oscilloscope lines tracing flatline across screen, trans...
+
+49
+00:04:12,000 --> 00:04:17,500
+[PS4 BENCHMARK // 15.2 FPS IN REVOLUTIONARY CROWD] Digital Foundry split-screen: Gameplay of Arno running through crowd r...
+
+50
+00:04:17,500 --> 00:04:23,000
+[FRAME-TIME SPIKE // 66.6 MS LATENCY (STUTTER)] Frame time graph displaying violent jagged orange spikes reaching 66 m...
+
+51
+00:04:23,000 --> 00:04:28,000
+[TARGET: 30 FPS // ACTUAL: 15.2 FPS (-49%)] Bold typographic display: '15.0 FPS', image visibly juddering and drop...
+
+52
+00:04:28,000 --> 00:04:33,500
+[THERMAL IMAGING // 65°C EXHAUST VENT HEAT] Thermal FLIR camera view of PlayStation 4 console back vents glowing b...
+
+53
+00:04:33,500 --> 00:04:39,000
+[UBISOFT ENTERTAINMENT (EPA: UBI) // -9.3% IN 48 HOURS] Bloomberg financial terminal graph showing Ubisoft stock ticker (EPA: ...
+
+54
+00:04:39,000 --> 00:04:44,500
+[MARKET CAP LOSS: OVER €150 MILLION] Financial infographic: Ubisoft market capitalization evaporating, nume...
+
+55
+00:04:44,500 --> 00:04:50,000
+[YVES GUILLEMOT // CEO & CO-FOUNDER, UBISOFT] Portrait of Ubisoft CEO Yves Guillemot with serious, tense expression ...
+
+56
+00:04:50,000 --> 00:04:55,000
+[SILICON BOTTLENECK REACHED] Close-up of a microchip on circuit board, copper heatpipes glowing dul...
+
+57
+00:04:55,000 --> 00:05:00,000
+[ACT III // FORENSIC CODE BREAKDOWN] Camera dives into motherboard circuit pathways, zooming directly into ...
+
+58
+00:05:00,000 --> 00:05:05,000
+[DIRECTX 11 GRAPHICS PIPELINE // CPU-GPU BUS] Technical architectural block diagram: CPU box on left, GPU box on rig...
+
+59
+00:05:05,000 --> 00:05:10,500
+[ANALOGY: THE CPU WAITER & GPU CHEF] Conceptual 3D animation: A busy chef (GPU) standing in front of hot st...
+
+60
+00:05:10,500 --> 00:05:15,500
+[RENDER CALL INSTRUCTION // SINGLE PASS] Dark terminal screen: Function call highlighted: `DrawIndexed(mesh, ma...
+
+61
+00:05:15,500 --> 00:05:21,000
+[DRAW CALL BUDGET: 10,000 // AC UNITY: 50,000+ PER FRAME] Bar chart: Normal AAA game (2014) = 8,000 to 10,000 draw calls per fra...
+
+62
+00:05:21,000 --> 00:05:26,500
+[PIPELINE SATURATION // 5X HARDWARE CEILING] Infographic breakdown: 50,000 draw calls per frame breakdown (Architec...
+
+63
+00:05:26,500 --> 00:05:31,500
+[DRIVER OVERHEAD // SINGLE-THREAD BOTTLENECK] A 10-lane highway merging into single narrow toll booth, thousands of ...
+
+64
+00:05:31,500 --> 00:05:36,500
+[GPU STARVATION // WAITING FOR CPU PIPELINE] PC telemetry overlay on gameplay: GPU usage sits at only 42% while fra...
+
+65
+00:05:36,500 --> 00:05:42,000
+[DEVELOPER POSTMORTEM // GDC ARCHIVE] Slide quote from Ubisoft lead programmer: 'We simply asked more from t...
+
+66
+00:05:42,000 --> 00:05:47,000
+[SEMICONDUCTOR JUNCTION CHOKE] Microscopic cross-section of silicon wafer, electron streams bottlenec...
+
+67
+00:05:47,000 --> 00:05:52,000
+[SECTION 3.2 // THE CPU TRAP] Wireframe overlay transitions smoothly from graphics card bus into 8-c...
+
+68
+00:05:52,000 --> 00:05:57,000
+[AMD 'JAGUAR' APU // 8 CORES @ 1.6 GHZ (NETBOOK ARCHITECTURE)] Macro photograph of the AMD Jaguar 8-core APU silicon die used in PS4 ...
+
+69
+00:05:57,000 --> 00:06:02,000
+[CLOCK FREQUENCY: CONSOLE 1.6 GHZ VS DESKTOP 3.5 GHZ] Minimalist comparison bar: Desktop PC CPU: 3.5 GHz (tall green bar) vs...
+
+70
+00:06:02,000 --> 00:06:07,000
+[CROSS-CLUSTER BUS LATENCY // 2X 4-CORE MODULES] Diagram showing 8 cores split into two separate clusters of 4 cores, r...
+
+71
+00:06:07,000 --> 00:06:12,000
+[INDIVIDUAL NPC AI LOGIC // PER-FRAME EVALUATION] Gameplay: Arno standing in crowd, camera pans around showing dozens of...
+
+72
+00:06:12,000 --> 00:06:17,000
+[DYNAMIC RAYCASTING // NAVMESH CALCULATIONS] Overhead view of Parisian street: 5,000 glowing yellow raycast lines r...
+
+73
+00:06:17,000 --> 00:06:22,000
+[CPU THREAD UTILIZATION // 100% ALL CORES MAXED] Telemetry graph showing all 8 CPU cores pegged flat at 100% saturation...
+
+74
+00:06:22,000 --> 00:06:27,000
+[WITHOUT CROWD: 30 FPS // WITH CROWD: 18 FPS] Comparison gameplay: In quieter cemetery or indoors without crowds, fr...
+
+75
+00:06:27,000 --> 00:06:32,000
+[TECHNICAL VERDICT // ARCHITECTURAL MISMATCH] Minimalist typography on deep black: 'AMBITION RAN AHEAD OF SILICON AR...
+
+76
+00:06:32,000 --> 00:06:37,000
+[MECHANICAL OVERLOAD SIMULATION] Intricate clockwork brass gears spinning rapidly, a massive steel bloc...
+
+77
+00:06:37,000 --> 00:06:42,000
+[SECTION 3.3 // THE LIGHTING PARADOX] A brilliant beam of sunlight entering through dark archway, refracting...
+
+78
+00:06:42,000 --> 00:06:47,500
+[BAKED GLOBAL ILLUMINATION // PHYSICAL BASED RENDERING] Gameplay: Arno walking through damp Parisian covered passage at sunset...
+
+79
+00:06:47,500 --> 00:06:53,000
+[PHOTON BOUNCE SIMULATION // RADIOSITY TRANSFER] Technical 3D render showing photon rays bouncing off red brick wall, c...
+
+80
+00:06:53,000 --> 00:06:58,000
+[VOLUMETRIC ATMOSPHERIC SCATTERING] Close-up of dust motes floating through warm volumetric sunbeam inside...
+
+81
+00:06:58,000 --> 00:07:03,500
+[LIGHTMAP BUFFER DENSITY // 20GB+ CACHED DATA] Infographic: Gigabytes of baked lightmap data (Over 20 GB of high-res ...
+
+82
+00:07:03,500 --> 00:07:09,000
+[TEXTURE STREAMING COLLISION // VRAM PRIORITIZATION] Animation of computer memory buffer: Huge lighting files filling RAM, ...
+
+83
+00:07:09,000 --> 00:07:14,500
+[DIGITAL FOUNDRY ARCHIVE // NOVEMBER 2014] Highlighted article excerpt: 'The No-Face glitch was a direct conseque...
+
+84
+00:07:14,500 --> 00:07:19,500
+[THE PARADOX OF ARTISTIC OBSESSION] A gorgeous Renaissance oil painting of Paris, paint layers suddenly cr...
+
+85
+00:07:19,500 --> 00:07:25,000
+[PARIS TWILIGHT // GATHERING STORM] Panoramic view of Paris skyline at twilight, warm city lights flickeri...
+
+86
+00:07:25,000 --> 00:07:30,000
+[ACT IV // THE APOLOGY & THE CONCESSIONS] Sleek minimalist slate grey backdrop, a single thin crimson border box...
+
+87
+00:07:30,000 --> 00:07:35,000
+[UBISOFT CRISIS WAR ROOM // MONTREAL HEADQUARTERS] Long conference table inside modern glass corporate boardroom, whitebo...
+
+88
+00:07:35,000 --> 00:07:40,500
+[YANNIS MALLAT // CEO OF UBISOFT MONTREAL] Portrait photo of Yannis Mallat, Managing Director of Ubisoft Montreal...
+
+89
+00:07:40,500 --> 00:07:46,000
+[OFFICIAL OPEN LETTER // NOVEMBER 27, 2014] Archival screenshot of the official public apology letter published on...
+
+90
+00:07:46,000 --> 00:07:51,000
+[EXCERPT: YANNIS MALLAT'S PUBLIC STATEMENT] Textured parchment card: 'THE OVERALL QUALITY OF THE GAME WAS DIMINISH...
+
+91
+00:07:51,000 --> 00:07:56,500
+[UBISOFT OFFICIAL APOLOGY // 27.11.2014] Clean white typography fading in on deep burgundy background: 'I WOULD...
+
+92
+00:07:56,500 --> 00:08:01,500
+[COMMUNITY LIVE UPDATES HUB // DAILY TRACKING] Screen capture of the newly launched 'Live Updates' blog showing daily...
+
+93
+00:08:01,500 --> 00:08:06,500
+[ENGINEERING EMERGENCY OVERTIME // NOVEMBER 2014] Documentary photo of software engineers hunched over dual monitors wri...
+
+94
+00:08:06,500 --> 00:08:12,000
+[CORPORATE REPARATIONS RATIO] A sleek set of bronze scales of justice, one pan holding a cracked Blu...
+
+95
+00:08:12,000 --> 00:08:17,000
+[SECTION 4.2 // THE UNPRECEDENTED CONCESSION] A thick legal dossier hitting wooden table, harsh red ink rubber stamp...
+
+96
+00:08:17,000 --> 00:08:22,000
+[DEAD KINGS EXPANSION // BASILICA OF SAINT-DENIS] Trailer shot of Arno in subterranean catacombs beneath Saint-Denis hol...
+
+97
+00:08:22,000 --> 00:08:27,500
+[DLC VALUATION: $29.99 -> $0.00] A digital pricing graphic: '$29.99' slashed across by a bold crimson l...
+
+98
+00:08:27,500 --> 00:08:32,500
+[SEASON PASS SALES SUSPENDED // NOVEMBER 2014] Graphic card: 'Assassin's Creed Unity Season Pass Sales Discontinued I...
+
+99
+00:08:32,500 --> 00:08:38,000
+[AAA GAME REDEMPTION ROSTER // $59.99 VALUE EACH] Webpage capture: Ubisoft Free Game Redemption page displaying 6 AAA ti...
+
+100
+00:08:38,000 --> 00:08:43,500
+[MAJOR 2014 RELEASES OFFERED AS APOLOGY] Montage of high-octane gameplay: Pagan Min in Far Cry 4, supercars rac...
+
+101
+00:08:43,500 --> 00:08:48,500
+[FINANCIAL IMPACT: ~$30-50M ESTIMATED REVENUE FOREGONE] Financial diagram showing revenue write-down: estimated tens of millio...
+
+102
+00:08:48,500 --> 00:08:54,000
+[LEGAL WAIVER CLAUSE // CLASS ACTION PROTECTION] Highlighted legal terms on redemption website: 'By accepting this free...
+
+103
+00:08:54,000 --> 00:08:59,500
+[COMMUNITY SENTIMENT SHIFT // PARTIAL PLACATION] Gaming forum posts and YouTube video titles: 'Ubisoft actually apologi...
+
+104
+00:08:59,500 --> 00:09:05,000
+[EMERGENCY STRUCTURAL STABILIZATION] Close-up of cracked stone foundations of an architectural building, he...
+
+105
+00:09:05,000 --> 00:09:10,500
+[THE PATCHING ODYSSEY // NOVEMBER 2014 – FEBRUARY 2015] Timeline tracker: Patch 1.2 (Nov 14), Patch 1.3 (Nov 26), Patch 1.4 (D...
+
+106
+00:09:10,500 --> 00:09:16,000
+[PATCH 1.4 DOWNLOAD // 40.0 GB TOTAL RE-DOWNLOAD] PS4 download screen notification: 'Assassin's Creed Unity Update 1.4 (...
+
+107
+00:09:16,000 --> 00:09:21,500
+[CROWD OCCLUSION CULLING & LOD OPTIMIZATION] 3D technical render showing how patch engineers reduced NPC distance r...
+
+108
+00:09:21,500 --> 00:09:27,000
+[PATCH 1.5 (FEB 2015) // UNLOCK ALL APP CHESTS] Official patch notes document highlighting: 'All Nomad and Companion A...
+
+109
+00:09:27,000 --> 00:09:32,500
+[PERFORMANCE RECOVERY // STABLE 28-30 FPS ATTAINED] Digital Foundry retest comparison: The same crowd square that ran at 1...
+
+110
+00:09:32,500 --> 00:09:38,500
+[POST-PATCH STABILITY // PARIS RUNTIME REACHED] Gorgeous gameplay clip of Arno sprinting across rooftops, executing fl...
+
+111
+00:09:38,500 --> 00:09:44,000
+[SHIGERU MIYAMOTO'S AXIOM REFLECTED] Matte black screen, stark white text: 'A DELAYED GAME IS EVENTUALLY GO...
+
+112
+00:09:44,000 --> 00:09:49,500
+[THE EXHAUSTION OF TRIAGE DEVELOPMENT] Silhouette of an exhausted game developer standing alone in dark offic...
+
+113
+00:09:49,500 --> 00:09:55,000
+[KINTSUGI OF REPUTATION // SCARS REMAIN] A shattered vanity mirror pieced back together with gold lacquer, hair...
+
+114
+00:09:55,000 --> 00:10:00,500
+[ACT V // THE COLLAPSE OF THE ANNUAL FACTORY] The dark silhouette of London's Big Ben emerging through industrial ye...
+
+115
+00:10:00,500 --> 00:10:05,500
+[LONDON, 1868 // INDUSTRIAL REVOLUTION] Victorian London 1868: Chimneys spewing coal smoke over the Thames riv...
+
+116
+00:10:05,500 --> 00:10:10,500
+[ASSASSIN'S CREED: SYNDICATE // HIGH POLISH LAUNCH] Gameplay: Jacob and Evie Frye riding horse carriages through cobblesto...
+
+117
+00:10:10,500 --> 00:10:16,000
+[UK WEEK 1 PHYSICAL SALES // SYNDICATE: -54% VS UNITY] Bar chart: Unity Week 1 UK Sales (Tall blue bar) vs Syndicate Week 1 U...
+
+118
+00:10:16,000 --> 00:10:21,000
+[MARKET DYNAMICS // COLLATERAL REPUTATIONAL DAMAGE] Dark backdrop, red typography: 'THE SINS OF THE FATHER: WHY A GREAT GA...
+
+119
+00:10:21,000 --> 00:10:26,000
+[RETAIL STAGNATION // CONSUMER SKEPTICISM] Retail shelves stacked with unsold copies of Assassin's Creed Syndicat...
+
+120
+00:10:26,000 --> 00:10:31,500
+[UBISOFT EARNINGS CALL // NOVEMBER 2015] Photo of CEO Yves Guillemot addressing financial analysts on investor ...
+
+121
+00:10:31,500 --> 00:10:36,500
+[THE ANNUAL PRODUCTION CONVEYOR BELT (2009–2015)] Timeline showing yearly releases: 2009 (AC2), 2010 (Brotherhood), 2011...
+
+122
+00:10:36,500 --> 00:10:42,000
+[FACTORY MACHINE COLLAPSE] A massive steel conveyor belt carrying golden video game cases, mechan...
+
+123
+00:10:42,000 --> 00:10:47,500
+[GLOBAL COLLABORATION WEB // 10 STUDIOS, 1,000+ DEVELOPERS] World map with illuminated lines connecting 10 Ubisoft studios: Montre...
+
+124
+00:10:47,500 --> 00:10:52,500
+[THE FREEZE ORDER // FEBRUARY 2016] The fiery industrial conveyor belt rapidly freezes solid, ice crystals...
+
+125
+00:10:52,500 --> 00:10:57,500
+[YEAR 2016 // NO ASSASSIN'S CREED TITLE SCHEDULED] A minimalist calendar grid of 2016, where an Assassin's Creed release ...
+
+126
+00:10:57,500 --> 00:11:02,500
+[OFFICIAL UBISOFT BLOG // 11 FEBRUARY 2016] Clean white serif text: 'THIS YEAR, WE ARE STEPPING BACK AND RE-EXAMIN...
+
+127
+00:11:02,500 --> 00:11:07,500
+[RE-IMAGINING WORKSHOPS // MONTREAL 2016] Creative directors and game designers sitting around coffee tables wit...
+
+128
+00:11:07,500 --> 00:11:12,500
+[STRUCTURAL GENRE EVOLUTION // ACTION ADVENTURE -> RPG] Diagram: Left side shows 'Dense City Parkour / Social Stealth' transit...
+
+129
+00:11:12,500 --> 00:11:17,500
+[ASHRAF ISMAIL // GAME DIRECTOR, AC ORIGINS] Game Director Ashraf Ismail speaking passionately in interview about b...
+
+130
+00:11:17,500 --> 00:11:22,500
+[ANCIENT EGYPT // PTOLEMAIC ERA CONCEPT ART] Artistic concept illustration of golden Egyptian sand dunes stretching...
+
+131
+00:11:22,500 --> 00:11:27,500
+[DEVELOPMENT LIFECYCLE: EXTENDED TO 4 FULL YEARS] Comparison chart: Unity development crunch cycle vs Origins extended 4...
+
+132
+00:11:27,500 --> 00:11:32,500
+[E3 2017 // ASSASSIN'S CREED ORIGINS REVEAL] Bayek of Siwa sliding down side of Great Pyramid, launching his eagle ...
+
+133
+00:11:32,500 --> 00:11:37,500
+[FRANCHISE METAMORPHOSIS COMPLETE] Dark backdrop, gold typography: 'THE TRAGEDY OF PARIS PAVED THE ROAD T...
+
+134
+00:11:37,500 --> 00:11:42,500
+[ACT VI // THE ASHES & VINDICATION] Golden desert sand particles swirling in wind, gradually turning darke...
+
+135
+00:11:42,500 --> 00:11:48,000
+[ACTION-RPG HITBOX SYSTEM // ORIGINS GAMEPLAY] Gameplay: Bayek fighting bandits with spear, rolling, parrying, sweepi...
+
+136
+00:11:48,000 --> 00:11:53,500
+[COMMERCIAL REBOUND // ORIGINS: 2X SYNDICATE SALES] Sales graph: Origins doubling Syndicate's launch sales within the firs...
+
+137
+00:11:53,500 --> 00:11:58,500
+[ENVIRONMENTAL DENSITY // URBAN MATRIX VS WILDERNESS] Comparison graphic: AC Unity's dense, 1:1 claustrophobic urban streets...
+
+138
+00:11:58,500 --> 00:12:04,000
+[FLUID PARKOUR SYSTEM // THE PEAK OF URBAN MOBILITY] Gameplay: Arno fluidly vaulting over railings, sliding under tables, s...
+
+139
+00:12:04,000 --> 00:12:09,500
+[HISTORICAL RECORD // UNMATCHED ARCHITECTURAL SCALE] Dark grey screen, crisp white typography: 'UBISOFT NEVER BUILT A CITY ...
+
+140
+00:12:09,500 --> 00:12:15,000
+[THE ISOLATED MONUMENT] A majestic white marble monument representing 18th-century Paris, part...
+
+141
+00:12:15,000 --> 00:12:20,000
+[BARGAIN BIN OBSCURITY // 2016–2018] Pre-owned copies of AC Unity sitting quietly in secondhand discount ba...
+
+142
+00:12:20,000 --> 00:12:25,500
+[TIMELINE WARP // APRIL 15, 2019] High-speed digital timeline clock spinning past 2017, 2018, stopping p...
+
+143
+00:12:25,500 --> 00:12:30,500
+[ACT VI // THE ASHES OF NOTRE-DAME] Dark billowing plumes of smoke rising slowly into an ominous orange tw...
+
+144
+00:12:30,500 --> 00:12:35,500
+[PARIS, FRANCE // APRIL 15, 2019 — 18:50 CEST] Real archival news footage: Thick yellow-grey smoke pouring from the w...
+
+145
+00:12:35,500 --> 00:12:41,000
+[CATHEDRAL SPIRE COLLAPSE // HISTORIC TRAGEDY] Archival video: The iconic historic wooden spire of Notre-Dame engulfe...
+
+146
+00:12:41,000 --> 00:12:46,000
+[CITIZENS VIGIL ON THE BANKS OF THE SEINE] Parisians kneeling on cobblestones along the Seine river, holding rosa...
+
+147
+00:12:46,000 --> 00:12:51,000
+[POST-FIRE DAMAGE ASSESSMENT // OPEN VAULT ROOF] Interior photo the morning after: Giant gaping hole in the stone vault...
+
+148
+00:12:51,000 --> 00:12:56,000
+[THE RECONSTRUCTION DILEMMA] Dark ash-grey background, stark white typography: 'HOW DO YOU REBUILD ...
+
+149
+00:12:56,000 --> 00:13:01,500
+[CAROLINE MIOUSSE // 2 YEARS OF METICULOUS 3D ARCHIVING] Archival photo of Caroline Miousse looking at her completed 3D model o...
+
+150
+00:13:01,500 --> 00:13:07,000
+[DIGITAL TWIN // MILLIMETER ACCURACY MESH DATA] Detailed 3D wireframe render of Caroline's Notre-Dame model: Every gar...
+
+151
+00:13:07,000 --> 00:13:12,000
+[GLOBAL MEDIA REPORTING // APRIL 2019] Collage of international news headlines: BBC, The Guardian, Forbes: 'C...
+
+152
+00:13:12,000 --> 00:13:17,500
+[DIGITAL MEMORY PRESERVING HISTORY] Charred, smoking stone rubble on ground, suddenly glowing golden digit...
+
+153
+00:13:17,500 --> 00:13:22,500
+[SECTION 6.2 // THE DIGITAL GIFT] A clean, radiant white transition bloom fading out smoke, revealing a ...
+
+154
+00:13:22,500 --> 00:13:27,500
+[UBISOFT DONATION PLEDGE // €500,000 (18 MILLION THB)] Ubisoft official press announcement: 'Supporting Notre-Dame de Paris',...
+
+155
+00:13:27,500 --> 00:13:32,500
+[UBISOFT GIVEAWAY // 100% FREE ON PC] Uplay storefront banner: 'Experience Notre-Dame as it was: Assassin's ...
+
+156
+00:13:32,500 --> 00:13:37,500
+[UBISOFT PRESS STATEMENT // APRIL 2019] White typography on royal blue: 'VIDEO GAMES CAN ENABLE US TO EXPLORE ...
+
+157
+00:13:37,500 --> 00:13:42,500
+[GLOBAL DOWNLOAD SURGE // 3,000,000+ COPIES IN 1 WEEK] Infographic counter: Number of downloads surging past 1,000,000... 2,0...
+
+158
+00:13:42,500 --> 00:13:47,500
+[STEAM COMMUNITY REVIEWS // 'VERY POSITIVE' INFLUX] Steam review chart screenshot showing massive spike of over 800 positi...
+
+159
+00:13:47,500 --> 00:13:52,500
+[VIRTUAL PILGRIMAGE // PLAYERS PAYING TRIBUTE] Gameplay: Thousands of online players climbing to the top of Notre-Dam...
+
+160
+00:13:52,500 --> 00:13:57,500
+[THE IMMORTAL SANCTUARY // UNTOUCHED BY FIRE] Camera tracking slowly down the central nave of virtual Notre-Dame, ca...
+
+161
+00:13:57,500 --> 00:14:02,500
+[CAROLINE'S STONEWORK // ARCHIVED FOREVER] Macro close-up on virtual stone gargoyle overlooking Paris, raindrops ...
+
+162
+00:14:02,500 --> 00:14:07,500
+[REBIRTH THROUGH DIGITAL PRESERVATION] A majestic phoenix bird sculpted from glowing blue laser wireframe lin...
+
+163
+00:14:07,500 --> 00:14:12,500
+[SECTION 6.3 // THE VERDICT OF TIME] Dark charcoal background, sleek modern minimalist HUD displaying: 'PRE...
+
+164
+00:14:12,500 --> 00:14:18,000
+[MODERN HARDWARE BENCHMARK // 4K 60 FPS UNLOCKED] Gameplay captured on modern PlayStation 5 / PC RTX 4090: Silky smooth ...
+
+165
+00:14:18,000 --> 00:14:23,500
+[HARDWARE CATCH-UP // 10 YEARS OF SILICON PROGRESS] Modern benchmark graph: 4K Ultra Settings running at locked 120 FPS wi...
+
+166
+00:14:23,500 --> 00:14:28,500
+[GRAPHICAL TIMELESSNESS // 2014 VS 2024] Side-by-side graphical comparison: AC Unity (2014) cloth physics and b...
+
+167
+00:14:28,500 --> 00:14:34,000
+[RETROSPECTIVE CONSENSUS // A DECADE AHEAD] Minimalist black screen, elegant white serif text: 'A GAME THAT WAS RE...
+
+168
+00:14:34,000 --> 00:14:39,000
+[PARIS, THE CITY OF LIGHTS // 1789 SIMULATION] Breathtaking wide shot of Paris bathed in twilight, thousands of tiny ...
+
+169
+00:14:39,000 --> 00:14:44,500
+[THE ASSASSIN'S VIGIL // PARIS 1789] Arno Victor Dorian standing in classic Assassin pose atop church spire...
+
+170
+00:14:44,500 --> 00:14:50,000
+[THE CENTRAL QUESTION] Matte black backdrop, subtle centered serif typography fading in slowl...
+
+171
+00:14:50,000 --> 00:14:55,500
+[FINAL REFLECTION // LEMiNO STYLE] A solitary quotation fading in: 'PERFECTION DEMANDS TIME. SILICON EVEN...
+
+172
+00:14:55,500 --> 00:15:00,000
+[THE END // 15:00.00] Pitch black screen, a single white minimalist font credit: 'WRITTEN & ...
+
