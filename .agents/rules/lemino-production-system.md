@@ -37,5 +37,11 @@ All scenes use a modular color theme system defined in `templates/lemino-episode
 2. **Composition Authoring:** Generate HTML compositions via script using the template.
 3. **Quality Check:** Run `npx hyperframes check` (GPU hardware probe).
 4. **Master Render:** Execute `TMPDIR=/home/keng/.tmp npm run render` inside the act directory.
-5. **Episode Assembly:** Concat all acts via `ffmpeg -f concat -c copy`.
+5. **Episode Assembly & Audio Mastering:** Concat all acts, apply dynamic sidechain ducking, vocal EQ carving, and multi-track SFX balancing via `templates/lemino-episode-template/stitch_episode.py`.
 6. **Cloud Delivery:** Upload master and individual acts to Google Drive `Vids Exports/` via `rclone`.
+
+## 5. Broadcast Audio & Sound Mastering Standards
+- **Vocal Dominance:** Voiceover narration must always lead with +3.5dB presence boost and crisp intelligibility.
+- **Dynamic Sidechain Ducking:** All background music (BGM) must automatically duck down (-70% to -80%) whenever voiceover speaks (`sidechaincompress=threshold=0.03:ratio=8:attack=20:release=350`).
+- **Acoustic Frequency Carving:** BGM must have a notch EQ cut of -6dB at 1,200 Hz (`equalizer=f=1200:width_type=o:w=2:g=-6`) so instruments never clash with vocal fundamentals.
+- **Subtle Layered SFX:** Foley, vinyl crackle, and bass impacts must be blended transparently below vocal dialogue.
